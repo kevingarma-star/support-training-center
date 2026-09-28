@@ -142,3 +142,113 @@ textarea { min-height: 180px; resize: vertical; line-height: 1.55; }
 @media (max-width: 560px) {
   .lvl { display: none; }
 }
+
+/* ── Page fade transition ─────────────────────────────────── */
+.page-fade {
+  animation: pageFadeIn .28s ease both;
+}
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── XP float ─────────────────────────────────────────────── */
+.xpfloat {
+  position: fixed;
+  z-index: 60;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 22px;
+  color: #F5B544;
+  pointer-events: none;
+  transform: translateX(-50%);
+  animation: xpup 1.3s cubic-bezier(.2,.8,.4,1) forwards;
+  text-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
+@keyframes xpup {
+  0%   { opacity: 0; transform: translateX(-50%) scale(.7) translateY(0px); }
+  18%  { opacity: 1; transform: translateX(-50%) scale(1.15) translateY(-6px); }
+  60%  { opacity: 1; transform: translateX(-50%) scale(1) translateY(-32px); }
+  100% { opacity: 0; transform: translateX(-50%) scale(.9) translateY(-72px); }
+}
+
+/* ── Quiz shake on wrong ──────────────────────────────────── */
+.q-shake { animation: shake .42s ease; }
+@keyframes shake {
+  0%,100% { transform: none; }
+  15%  { transform: translateX(-7px); }
+  35%  { transform: translateX(7px); }
+  55%  { transform: translateX(-5px); }
+  75%  { transform: translateX(4px); }
+  90%  { transform: translateX(-2px); }
+}
+
+/* ── Correct answer pulse ─────────────────────────────────── */
+.opt.correct { animation: correctPulse .5s ease; }
+@keyframes correctPulse {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.025); }
+  100% { transform: scale(1); }
+}
+
+/* ── Dashboard card stagger ───────────────────────────────── */
+.grid .modcard {
+  opacity: 0;
+  animation: cardIn .4s ease forwards;
+}
+.grid .modcard:nth-child(1)  { animation-delay: .04s; }
+.grid .modcard:nth-child(2)  { animation-delay: .08s; }
+.grid .modcard:nth-child(3)  { animation-delay: .12s; }
+.grid .modcard:nth-child(4)  { animation-delay: .16s; }
+.grid .modcard:nth-child(5)  { animation-delay: .20s; }
+.grid .modcard:nth-child(6)  { animation-delay: .24s; }
+.grid .modcard:nth-child(7)  { animation-delay: .28s; }
+.grid .modcard:nth-child(8)  { animation-delay: .32s; }
+.grid .modcard:nth-child(9)  { animation-delay: .36s; }
+.grid .modcard:nth-child(10) { animation-delay: .40s; }
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── Level-up toast ───────────────────────────────────────── */
+.levelup-toast {
+  position: fixed;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 99px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  z-index: 65;
+  box-shadow: 0 4px 24px rgba(0,0,0,.22);
+  animation: toastIn .4s cubic-bezier(.2,.8,.2,1) both,
+             toastOut .35s .95s ease forwards;
+  white-space: nowrap;
+}
+.levelup-icon { font-size: 22px; }
+.levelup-label { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #F5B544; font-weight: 700; }
+.levelup-name { font-family: var(--display); font-size: 17px; }
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px) scale(.9); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+}
+@keyframes toastOut {
+  to { opacity: 0; transform: translateX(-50%) translateY(20px) scale(.9); }
+}
+
+/* ── Lesson complete button pulse ────────────────────────── */
+.btn-complete {
+  animation: btnPulse 2s ease infinite;
+}
+@keyframes btnPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(11,122,118,.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(11,122,118,0); }
+}
+

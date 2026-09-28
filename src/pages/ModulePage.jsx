@@ -105,7 +105,7 @@ export default function ModulePage({ completedLessons, quizScores, completeLesso
           <div className="lessonfoot">
             <div />
             {!completedLessons[activeLesson.id] ? (
-              <button className="btn" onClick={handleMarkDone}>
+              <button className="btn btn-complete" onClick={handleMarkDone}>
                 Mark complete → {activeLesson.id === part.lessons[part.lessons.length - 1].id ? 'Take quiz' : 'Next lesson'}
               </button>
             ) : (
