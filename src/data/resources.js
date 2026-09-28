@@ -1,0 +1,61 @@
+export const RESOURCES = [
+ {g:"Internal references", items:[
+  ["Device Troubleshooting Guide (Notion)","https://app.notion.com/p/3a9abe57a6f54a86b678e155da1f7aaf","Deep technical reference"],
+  ["Customer Support hub (Notion)","https://app.notion.com/p/4807c32b91274d1283435a9a80b83c5d","Policies, procedures, tracker guides"],
+  ["Tier 2 Escalation Process (Notion)","https://app.notion.com/p/1291e1115edb80c5ab98ef44e3f78c00","Intercom ticket flow"],
+  ["Intercom Tier 2 Macros checklists (Notion)","https://app.notion.com/p/f86d1fed88d4418191c346b7a8f2ce3a","What to collect per model"],
+  ["Branding in the Way We Respond (Notion)","https://app.notion.com/p/1291e1115edb805c9142c8015b6ad038","Connect / Qualify / Resolve"],
+  ["De-escalation Tips (Notion)","https://app.notion.com/p/1291e1115edb8070af64e393d9d9057e","Scripts for tough conversations"],
+  ["All You Need to Know About Concessions (Notion)","https://app.notion.com/p/5ade4170147b4121924dfa98969ed32a","When and how to give"],
+  ["Firing Customers and Final Resolutions (Notion)","https://app.notion.com/p/1291e1115edb80988fb0ce1cd07f28a6","5-day rule"],
+  ["All About the App (Notion)","https://app.notion.com/p/1271e1115edb806eb8c1e6d5e90173d0","App navigation"],
+  ["LGMX Macros – 2026 (Sheet)","https://docs.google.com/spreadsheets/d/1qMdi7yxiuzbECRTpZJA7Z3SX1VX3AvLSK3AeoO7sPv0/edit","Current macros"],
+  ["Canned Responses Library (Sheet)","https://docs.google.com/spreadsheets/d/1K4cJGmVE9leD2_QwwiiPvXTmk5xNiCOuZpR4onjmg9Q/edit","Quick replies"],
+  ["FIN AI Self-Help Troubleshooting Guide (Doc)","https://docs.google.com/document/d/1IbPsK-6Zjcag16ACdtJPV5uOqOFJ3I8qKeyXWowzX4U/edit","Per-model ladder"],
+  ["End of Week Reports folder (Drive)","https://drive.google.com/drive/folders/1lndUd5GO5h0B7UrDIkYQ-4He9oxjmTgV","Weekly call drivers and trends"]
+ ]},
+ {g:"Tools", items:[
+  ["Intercom","https://app.intercom.com","Helpdesk"],
+  ["GPX Admin","https://admin.gpx.co/","Accounts, devices, orders"],
+  ["FCC coverage map","https://fcc.maps.arcgis.com/apps/webappviewer/index.html?id=6c1b2e73d9d749cdb7bc88a0d1bdd25b","Pick the carrier layer"],
+  ["Customer web app","https://app.logistimatics.com","What customers see"],
+  ["Activation page","https://logistimatics.com/activate","Customer activation"],
+  ["Buy audio minutes","https://my.logistimatics.com/live-audio-for-gps-trackers/","$6/hour"]
+ ]},
+ {g:"Loom walkthroughs", items:[
+  ["Determine the fix type","https://www.loom.com/share/35a05669ff6e4c3dbc4fb08ec2d17b6b","GPS / Wi-Fi / Cell"],
+  ["Send and read CHECK#","https://www.loom.com/share/5270b2dc29a04fc4bf08ce9b933b9c57","Diagnostics"],
+  ["Send commands (Super SIM)","https://www.loom.com/share/edc0f13160bb45b9b12f228ce7c09e10","Admin"],
+  ["Send commands (Twilio SIM)","https://www.loom.com/share/811805abeabd435695893cf118fc4c8b","Admin"],
+  ["Check coverage","https://www.loom.com/share/9336861f763f418da7016d6b6638a25f","FCC map"],
+  ["Check data session","https://www.loom.com/share/bde3f05008c24b21a0b497175e956768","SIM portal"],
+  ["Check SIM status","https://www.loom.com/share/77779c4166d9417eb22d4f2dd6addd15","SIM portal"],
+  ["Check call log","https://www.loom.com/share/f3d5a6211b9e4b21b9843b55a0311ce3","Live audio"],
+  ["Refresh phone number","https://www.loom.com/share/ff01cf43fca44f02b7398a4bd82518c4","Live audio"],
+  ["Unassigned device activation flow","https://www.loom.com/share/0e7f62c8d09942dcb4e774f1b9f0c166","Amazon buyers"]
+ ]},
+ {g:"Help Center (customer-facing)", items:[
+  ["Help Center home","https://help.logistimatics.com/en/","Share these links freely"],
+  ["Activation Guide","https://help.logistimatics.com/en/articles/11135110-activation-guide",""],
+  ["Mobile-200 Troubleshooting Guide","https://help.logistimatics.com/en/articles/12088801-mobile-200-tracker-troubleshooting-guide",""],
+  ["Protect Plus Troubleshooting Guide","https://help.logistimatics.com/en/articles/12088895-protect-plus-tracker-troubleshooting-guide",""],
+  ["Pocket Tracker Troubleshooting Guide","https://help.logistimatics.com/en/articles/12095855-pocket-tracker-troubleshooting-guide",""],
+  ["What To Do When Your Tracker Is Not Tracking","https://help.logistimatics.com/en/articles/9581351-what-to-do-when-your-tracker-is-not-tracking",""],
+  ["Live Audio FAQ","https://help.logistimatics.com/en/articles/14497848-live-audio-frequently-asked-questions-faq",""],
+  ["Can't Connect to the Tracker's Audio","https://help.logistimatics.com/en/articles/9581338-can-t-connect-to-the-tracker-s-audio",""],
+  ["How Can I Add More Audio Minutes?","https://help.logistimatics.com/en/articles/9574129-how-can-i-add-more-audio-minutes",""],
+  ["Setting Up Alerts and Notifications","https://help.logistimatics.com/en/articles/9580722-setting-up-alerts-and-notifications-for-your-tracker",""],
+  ["All About Geofences","https://help.logistimatics.com/en/articles/9577793-all-about-geofences",""],
+  ["What Do the Colored Dots Mean?","https://help.logistimatics.com/en/articles/9580728-what-does-the-colored-dots-mean",""],
+  ["How to Update Payment Method","https://help.logistimatics.com/en/articles/9580747-how-to-update-payment-method",""],
+  ["How to Cancel Your Subscription","https://help.logistimatics.com/en/articles/9580771-how-to-cancel-your-subscription",""],
+  ["How to Reactivate Your Subscription","https://help.logistimatics.com/en/articles/9580760-how-to-reactivate-your-subscription",""],
+  ["Transfer Ownership of a Tracker","https://help.logistimatics.com/en/articles/9580767-how-to-transfer-ownership-of-a-tracker",""],
+  ["Transfer a Subscription Between Devices","https://help.logistimatics.com/en/articles/11784511-how-can-i-transfer-my-subscription-between-devices-or-trackers",""],
+  ["How Do I Return My Device?","https://help.logistimatics.com/en/articles/9581391-how-do-i-return-my-device",""],
+  ["Shipping Options","https://help.logistimatics.com/en/articles/9574124-what-are-our-shipping-options",""],
+  ["Unintended Tracker on Your Vehicle?","https://help.logistimatics.com/en/articles/9581400-unintended-tracker-on-your-vehicle-we-re-here-to-support-you",""],
+  ["Data Deletion Declaration","https://help.logistimatics.com/en/articles/9580734-data-deletion-declaration-for-logistimatics-customers",""],
+  ["SmartLabel Quick Start","https://help.logistimatics.com/en/articles/13460125-a-quick-start-guide-to-your-smartlabel-disposable-bluetooth-shipment-tracker",""]
+ ]}
+];
