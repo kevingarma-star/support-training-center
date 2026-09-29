@@ -6,6 +6,7 @@ export default function Quiz({ quiz, partId, onSubmit, existingScore }) {
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
+  const [shaking, setShaking] = useState({});  // qi -> true
 
   function pick(qi, oi) {
     if (submitted) return;
@@ -15,6 +16,11 @@ export default function Quiz({ quiz, partId, onSubmit, existingScore }) {
   function submit() {
     if (Object.keys(answers).length < quiz.length) return;
     const s = quiz.reduce((acc, q, i) => acc + (answers[i] === q.a ? 1 : 0), 0);
+    // trigger shake on wrong answers
+    const wrongOnes = {};
+    quiz.forEach((q, i) => { if (answers[i] !== q.a) wrongOnes[i] = true; });
+    setShaking(wrongOnes);
+    setTimeout(() => setShaking({}), 500);
     setScore(s);
     setSubmitted(true);
     onSubmit(partId, s, quiz.length);
@@ -49,7 +55,7 @@ export default function Quiz({ quiz, partId, onSubmit, existingScore }) {
         const chosen = answers[qi];
         const correct = item.a;
         return (
-          <div className="q" key={qi}>
+          <div className={`q${shaking[qi] ? ' q-shake' : ''}`} key={qi}>
             <h4><span>Q{qi + 1}.</span> {item.q}</h4>
             {item.o.map((opt, oi) => {
               let cls = 'opt';
