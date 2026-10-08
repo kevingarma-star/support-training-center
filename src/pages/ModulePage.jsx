@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { PARTS } from '../data/index.js';
 import Prose from '../components/Prose.jsx';
 import Quiz from '../components/Quiz.jsx';
+import SlideLesson from '../components/SlideLesson.jsx';
 
 const PART_COLORS = [
   '#0B7A76','#3A5BD9','#C2410C','#7C3AED',
@@ -101,7 +102,10 @@ export default function ModulePage({ completedLessons, quizScores, completeLesso
         <div className="lesson">
           <h2>{activeLesson.title}</h2>
           <div className="sub">{activeLesson.mins} min read</div>
-          <Prose html={activeLesson.body} />
+          {activeLesson.type === 'slides'
+            ? <SlideLesson lesson={activeLesson} />
+            : <Prose html={activeLesson.body} />
+          }
           <div className="lessonfoot">
             <div />
             {!completedLessons[activeLesson.id] ? (

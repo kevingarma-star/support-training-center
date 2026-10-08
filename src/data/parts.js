@@ -21,15 +21,25 @@ export const PARTS = [
 <h3>What we do</h3>
 <p><b>GPX Intelligence</b> specializes in GPS and Bluetooth (BLE) tracking for equipment, trailers, tools and vehicles. We serve 50+ industries worldwide and actively track more than 250,000 assets.</p>
 <p><b>Logistimatics</b> is our consumer-facing brand offering self-service GPS tracking for vehicles, people, shipments and personal assets.</p>`},
-  { n:3, id:"l3", title:"Our core values", mins:4, body:`
-<div class="row" style="gap:14px;margin-bottom:10px"><span class="chip prog">2026 theme: On Target</span><span class="chip">Our niche: loss prevention you can measure</span></div>
-<div class="tbl"><table><tr><th>Value</th><th>What it means</th><th>In a support conversation</th></tr>
-<tr><td><b>Truth, not noise</b><br><span class="small muted">"Signal, not dashboards for their own sake."</span></td><td>Boil every problem down to its core facts. Communicate clearly and directly.</td><td>Find the real cause (placement? SIM? motion?) before sending fixes, and tell the customer plainly.</td></tr>
-<tr><td><b>Customer wins, we win</b><br><span class="small muted">"Your outcome is the only metric."</span></td><td>We only succeed when our customers do.</td><td>Solve the customer's problem, not just the ticket.</td></tr>
-<tr><td><b>Make it simple</b><br><span class="small muted">"Live in days, not quarters."</span></td><td>Complexity is a tax. If it's hard to explain, it isn't finished.</td><td>Keep replies short, ask one question at a time, and use clear steps.</td></tr>
-<tr><td><b>Lead your lane</b><br><span class="small muted">"We do one thing at world-class depth."</span></td><td>Don't wait for permission to solve a problem.</td><td>Own your conversations from start to finish, including after a Tier 2 escalation.</td></tr>
-<tr><td><b>Disagree, commit, iterate</b><br><span class="small muted">"The product you buy keeps getting better."</span></td><td>Challenge ideas openly, then back the decision 100%.</td><td>Suggest better macros. Once a policy is set, apply it consistently.</td></tr>
-</table></div>`},
+  { n:3, id:"l3", title:"Our core values", mins:4, type:'slides',
+    chips:['2026 theme: On Target','Our niche: loss prevention you can measure'],
+    slides:[
+    { color:'#0B7A76', value:'Truth, not noise',            tagline:'"Signal, not dashboards for their own sake."',
+      what:'Boil every problem down to its core facts. Communicate clearly and directly.',
+      support:'Find the real cause (placement? SIM? motion?) before sending fixes, and tell the customer plainly.' },
+    { color:'#3A5BD9', value:'Customer wins, we win',        tagline:'"Your outcome is the only metric."',
+      what:'We only succeed when our customers do.',
+      support:"Solve the customer's problem, not just the ticket." },
+    { color:'#B45309', value:'Make it simple',               tagline:'"Live in days, not quarters."',
+      what:"Complexity is a tax. If it's hard to explain, it isn't finished.",
+      support:'Keep replies short, ask one question at a time, and use clear steps.' },
+    { color:'#7C3AED', value:'Lead your lane',               tagline:'"We do one thing at world-class depth."',
+      what:"Don't wait for permission to solve a problem.",
+      support:'Own your conversations from start to finish, including after a Tier 2 escalation.' },
+    { color:'#DB2777', value:'Disagree, commit, iterate',    tagline:'"The product you buy keeps getting better."',
+      what:'Challenge ideas openly, then back the decision 100%.',
+      support:'Suggest better macros. Once a policy is set, apply it consistently.' },
+    ]},
   { n:4, id:"l4team", title:"Meet the team", mins:4, body:`
 <p class="lead"><b>The people who answer when you call.</b> No ticket queues into the void. GPX is a deliberately small, senior team — the person who sets up your account is the person who picks up the phone.</p>
 <p class="small muted">Source: <a href="https://gpx.co/about-us/" target="_blank" rel="noopener">gpx.co/about-us</a></p>
