@@ -42,41 +42,68 @@ export const PARTS = [
     ]},
   { n:4, id:"l4team", title:"Meet the team", mins:4, body:`
 <p class="lead"><b>The people who answer when you call.</b> No ticket queues into the void. GPX is a deliberately small, senior team — the person who sets up your account is the person who picks up the phone.</p>
-<p class="small muted">Source: <a href="https://gpx.co/about-us/" target="_blank" rel="noopener">gpx.co/about-us</a></p>
+<p class="small muted">Source: <a href="https://gpx.co/about-us/" target="_blank" rel="noopener">gpx.co/about-us</a> · September 2026 · 17 people · 1 external partner</p>
 <h3>The team</h3>
 <div class="dir">
-<div class="dept"><div class="dept-h">Customer Experience &amp; Success</div><div class="team">
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2024/02/Faith-OMalley.jpg" alt="Faith O'Malley"><div><b>Faith O'Malley</b><span>Customer Success Manager</span></div></div>
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/dane-chung-customer-success-manager-gpx.webp" alt="Dane Chung"><div><b>Dane Chung</b><span>Customer Success Manager</span></div></div>
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/kevin-garma-customer-support-agent-gpx.webp" alt="Kevin Garma"><div><b>Kevin Garma</b><span>Customer Support Agent</span></div></div>
+<div class="dept"><div class="dept-h">Leadership</div>
+<div class="team">
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/gabe-weeks-ceo-gpx.webp" alt="Gabriel Weeks"><div><b>Gabriel Weeks</b><span>CEO</span></div></div>
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/ryan-graves-owner-and-advisor-gpx.webp" alt="Ryan Graves"><div><b>Ryan Graves</b><span>Owner</span></div></div>
 </div></div>
-<div class="dept"><div class="dept-h">Sales &amp; Marketing</div><div class="team">
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/mitch-belsley-vice-president-gpx.webp" alt="Mitch Belsley"><div><b>Mitch Belsley</b><span>Vice President</span></div></div>
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/mariam-ghanem-account-executive-gpx.webp" alt="Mariam Ghanem"><div><b>Mariam Ghanem</b><span>Account Executive</span></div></div>
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/mike-cadavida-account-executive-gpx.webp" alt="Mike Cadavida"><div><b>Mike Cadavida</b><span>Account Executive</span></div></div>
+<div class="dept"><div class="dept-h">Finance &amp; Operations</div>
+<div class="team">
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/tammy-henning-head-of-operations-and-finance-gpx.webp" alt="Tammy Henning"><div><b>Tammy Henning</b><span>Head of Finance &amp; Operations</span></div></div>
+</div>
+<div class="subdept"><div class="subdept-h">Fulfillment &amp; LGMX CS — Kevin West</div><div class="team">
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/kevin-west-fulfillment-and-operations-director-gpx.webp" alt="Kevin West"><div><b>Kevin West</b><span>Fulfillment &amp; CS Lead</span></div></div>
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/jay-bryant-fulfillment-specialist-gpx.webp" alt="Jay Bryant"><div><b>Jay Bryant</b><span>Fulfillment</span></div></div>
+<div class="tm"><img class="av" src="/support-training-center/team/anonymous.svg" alt="Daphnee Negron"><div><b>Daphnee Negron</b><span>Fulfillment</span></div></div>
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/kevin-garma-customer-support-agent-gpx.webp" alt="Kevin Garma"><div><b>Kevin Garma</b><span>LGMX Customer Support</span></div></div>
 </div></div>
-<div class="dept"><div class="dept-h">Product &amp; Business Intelligence</div><div class="team">
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/brooks-davis-director-of-hardware-gpx.webp" alt="Brooks Davis"><div><b>Brooks Davis</b><span>Director, Hardware</span></div></div>
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/aaron-taylor-business-intelligence-analyst-gpx.webp" alt="Aaron Taylor"><div><b>Aaron Taylor</b><span>Business Intelligence Analyst</span></div></div>
+</div>
+<div class="dept"><div class="dept-h">Product &amp; Marketing</div>
+<div class="team">
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/mitch-belsley-vice-president-gpx.webp" alt="Mitch Belsley"><div><b>Mitch Belsley</b><span>VP, Product &amp; Marketing</span></div></div>
+</div>
+<div class="subdept"><div class="subdept-h">Engineering</div><div class="team">
 <div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/ivan-kulikov-senior-engineer-gpx.webp" alt="Ivan Kulikov"><div><b>Ivan Kulikov</b><span>Senior Engineer</span></div></div>
 <div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/daniel-yankovskiy-senior-engineer-gpx.webp" alt="Daniel Yankovskiy"><div><b>Daniel Yankovskiy</b><span>Senior Engineer</span></div></div>
+<div class="tm"><img class="av" src="/support-training-center/team/anonymous.svg" alt="Maria Ruiz"><div><b>Maria Ruiz</b><span>Engineer</span></div></div>
 </div></div>
-<div class="dept"><div class="dept-h">Operations &amp; Finance</div><div class="team">
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/tammy-henning-head-of-operations-and-finance-gpx.webp" alt="Tammy Henning"><div><b>Tammy Henning</b><span>Head of Operations, Finance</span></div></div>
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/kevin-west-fulfillment-and-operations-director-gpx.webp" alt="Kevin West"><div><b>Kevin West</b><span>Fulfillment &amp; Operations Director</span></div></div>
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/jay-bryant-fulfillment-specialist-gpx.webp" alt="Jay Bryant"><div><b>Jay Bryant</b><span>Fulfillment Specialist</span></div></div>
+<div class="subdept"><div class="subdept-h">Hardware</div><div class="team">
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/brooks-davis-director-of-hardware-gpx.webp" alt="Brooks Davis"><div><b>Brooks Davis</b><span>Director, Hardware</span></div></div>
 </div></div>
-<div class="dept"><div class="dept-h">Leadership &amp; Advisory</div><div class="team">
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/gabe-weeks-ceo-gpx.webp" alt="Gabe Weeks"><div><b>Gabe Weeks</b><span>CEO</span></div></div>
-<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/ryan-graves-owner-and-advisor-gpx.webp" alt="Ryan Graves"><div><b>Ryan Graves</b><span>Owner</span></div></div>
+<div class="subdept"><div class="subdept-h">Marketing</div><div class="team">
+<div class="tm"><img class="av" src="/support-training-center/team/anonymous.svg" alt="Umer"><div><b>Umer</b><span>Marketing (3rd Party)</span></div></div>
+</div></div>
+</div>
+<div class="dept"><div class="dept-h">Revenue</div>
+<div class="team">
+<div class="tm"><img class="av" src="/support-training-center/team/devika-gireesh.jpg" alt="Devika Gireesh"><div><b>Devika Gireesh</b><span>Head of Account Mgmt &amp; New Business</span></div></div>
+</div>
+<div class="subdept"><div class="subdept-h">Account Management</div><div class="team">
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/mike-cadavida-account-executive-gpx.webp" alt="Mike Cadavida"><div><b>Mike Cadavida</b><span>Account Management</span></div></div>
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2024/02/Faith-OMalley.jpg" alt="Faith O'Malley"><div><b>Faith O'Malley</b><span>Account Management</span></div></div>
+</div></div>
+<div class="subdept"><div class="subdept-h">New Business</div><div class="team">
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/dane-chung-customer-success-manager-gpx.webp" alt="Dane Chung"><div><b>Dane Chung</b><span>New Business</span></div></div>
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/mariam-ghanem-account-executive-gpx.webp" alt="Mariam Ghanem"><div><b>Mariam Ghanem</b><span>New Business</span></div></div>
+</div></div>
+</div>
+<div class="dept"><div class="dept-h">Data</div>
+<div class="team">
+<div class="tm"><img class="av" src="https://gpx.co/wp-content/uploads/2026/09/aaron-taylor-business-intelligence-analyst-gpx.webp" alt="Aaron Taylor"><div><b>Aaron Taylor</b><span>Business Intelligence Analyst</span></div></div>
 </div></div>
 </div>
 <h3>Who to go to</h3>
 <ul>
-<li><b>Mitch Belsley:</b> support escalations and suspected product bugs</li>
-<li><b>Brooks Davis (Tier 2, with Alex):</b> device and connectivity problems</li>
-<li><b>Operations &amp; Finance:</b> disputes, chargebacks and shipments</li>
-<li><b>Sales (Mariam, Mike):</b> business and fleet leads</li>
+<li><b>Mitch Belsley:</b> product bugs and anything touching engineering, hardware or marketing</li>
+<li><b>Kevin West:</b> fulfillment, shipping, order disputes, and Logistimatics CS issues</li>
+<li><b>Devika Gireesh:</b> account management and new business questions</li>
+<li><b>Tammy Henning:</b> finance, operations and chargebacks</li>
+<li><b>Jay Bryant &amp; Brooks Davis (Tier 2):</b> device and hardware connectivity problems</li>
+<li><b>Ryan Graves (Owner):</b> ownership and executive matters</li>
+<li><b>Aaron Taylor:</b> data and business intelligence matters</li>
 <li><b>Lucy:</b> our Fin AI chat assistant, not a person</li>
 </ul>`},
   { n:5, id:"l4p", title:"Team policy: tardiness & attendance", mins:4, body:`
