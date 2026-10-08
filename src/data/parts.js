@@ -175,19 +175,8 @@ export const PARTS = [
   { n:7, id:"l7", title:"Intercom & Lucy (Fin AI)", mins:6, body:`
 <p><b>Intercom</b> is our helpdesk. Chats from the website and app, plus emails to <code>hello@logistimatics.com</code>, all land in the <b>LGMX – Customer Support</b> inbox.</p>
 <h3>How Lucy fits in</h3>
-<ul>
-<li><b>Lucy</b> (Fin AI) answers first. She handles activation, audio setup, pin colors, policy explanations and password reset links.</li>
-<li>About 4 in 10 AI conversations are escalated to us, mostly because the customer asked for a human. Read the transcript first so you don't repeat what Lucy already tried.</li>
-<li>The messenger buttons route conversations by topic: Set Up My Device, Something's Not Working, Manage My Subscription/Account, Order/Shipping, and I'm Interested in Your Products.</li>
-</ul>
-<h3>Working a conversation</h3>
-<ul>
-<li><b>Macros</b> are saved replies. Always personalize them before sending.</li>
-<li><b>Fill in the attributes</b> on every conversation: Serial Number, Tracker Model, Trouble Type, Issue Type and B2C Churn Gut Check. If you gave the customer anything, also fill in Concession Type, Amount and Scenario.</li>
-<li><b>Tag every conversation you close.</b> It takes about 10 seconds. Untagged conversations have run at 36–58% of weekly volume, which skews our reports.</li>
-<li><b>Snooze</b> sends an automatic check-in after about a day, then the conversation auto-closes after 3 more days. Clear your snoozed queue before the week ends.</li>
-<li><b>Converting a conversation to a Customer Ticket</b> is how you escalate to Tier 2 (see lesson 46).</li>
-</ul>`},
+<p><b>Lucy</b> is our Fin AI assistant built into Intercom. She's the first point of contact — she responds to customers automatically before a human agent steps in. When a conversation gets escalated to you, read the transcript first so you're not repeating what Lucy already tried.</p>
+`},
   { n:8, id:"l8", title:"GPX Admin", mins:6, body:`
 <p><b>GPX Admin</b> (<code>admin.gpx.co</code>) is where you manage everything behind a customer's account.</p>
 <div class="tbl"><table><tr><th>Area</th><th>What you do there</th></tr>
