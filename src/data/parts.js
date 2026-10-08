@@ -1,23 +1,26 @@
 export const PARTS = [
 /* ================= PART 1 ================= */
-{ id:"p1", part:1, title:"Welcome & Orientation", short:"Who we are, our values, the team, team policies",
-  blurb:"Who GPX Intelligence and Logistimatics are, the values we work by, the people on the team, and the team policies you need to know.",
+{ id:"p1", part:1, title:"Welcome & Orientation", short:"Who we are, how we work, what to know before day one",
+  blurb:"An introduction to who we are, how we work, and what you need to know before your first day on the floor.",
   quizTitle:"Orientation check",
   lessons:[
   { n:2, id:"l2", title:"Who are GPX Intelligence & Logistimatics?", mins:4, body:`
-<p><b>GPX Intelligence</b> is a location intelligence company. We specialize in GPS and Bluetooth (BLE) tracking for equipment, trailers, tools and vehicles. We serve 50+ industries worldwide and track more than 250K assets.</p>
-<p><b>Logistimatics</b> is our consumer brand. It offers GPS tracking for vehicles, people, shipments and assets, on a self-service platform. Customers use both names, so treat them as the same company.</p>
+<p class="lead">The short version: We're a location intelligence company that helps people and businesses track what matters most to them — whether that's a family member, a delivery shipment, or an entire fleet of vehicles.</p>
+<p>We operate under two brands:</p>
 <div class="tbl"><table><tr><th>Brand</th><th>Who it serves</th><th>Help Center</th></tr>
-<tr><td><b>Logistimatics</b></td><td>Individual consumers (B2C): families, drivers, small owners</td><td><code>help.logistimatics.com</code></td></tr>
-<tr><td><b>GPX Intelligence</b></td><td>Businesses (B2B): fleets, equipment, supply chain</td><td><code>help.gpx.co</code></td></tr>
+<tr><td><b>Logistimatics</b></td><td>Individual consumers (B2C): families, drivers, small business owners</td><td><code>help.logistimatics.com</code></td></tr>
+<tr><td><b>GPX Intelligence</b></td><td>Businesses (B2B): fleets, equipment managers, supply chain operators</td><td><code>help.gpx.co</code></td></tr>
 </table></div>
-<h3>Our story</h3>
+<p class="small muted">Customers often use both names interchangeably — and that's okay. For support purposes treat them as the same company.</p>
+<h3>Our Story</h3>
 <div class="tbl"><table><tr><th>Year</th><th>Milestone</th></tr>
-<tr><td>2016</td><td>Founded as Brickyard Wireless LLC in Greensboro, NC. Later became Logistimatics.</td></tr>
-<tr><td>2019</td><td>Moved into our own office and grew past 25,000 active subscribers on our own tracking platform.</td></tr>
-<tr><td>2020</td><td>Acquired by Saltwater. Began scaling B2B services under GPX Intelligence.</td></tr>
-<tr><td>2026</td><td>Launched the new Logistimatics app (4.6★). Passed 8,000 Logistimatics subscriptions.</td></tr>
-</table></div>`},
+<tr><td>2016</td><td>Founded as Brickyard Wireless LLC in Greensboro, NC — later rebranded as Logistimatics.</td></tr>
+<tr><td>2019</td><td>Moved into our own office and surpassed 25,000 active subscribers on our proprietary tracking platform.</td></tr>
+<tr><td>2020</td><td>Acquired by Saltwater and began scaling B2B services under the GPX Intelligence brand.</td></tr>
+</table></div>
+<h3>What we do</h3>
+<p><b>GPX Intelligence</b> specializes in GPS and Bluetooth (BLE) tracking for equipment, trailers, tools and vehicles. We serve 50+ industries worldwide and actively track more than 250,000 assets.</p>
+<p><b>Logistimatics</b> is our consumer-facing brand offering self-service GPS tracking for vehicles, people, shipments and personal assets.</p>`},
   { n:3, id:"l3", title:"Our core values", mins:4, body:`
 <div class="row" style="gap:14px;margin-bottom:10px"><span class="chip prog">2026 theme: On Target</span><span class="chip">Our niche: loss prevention you can measure</span></div>
 <div class="tbl"><table><tr><th>Value</th><th>What it means</th><th>In a support conversation</th></tr>
