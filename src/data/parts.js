@@ -178,22 +178,72 @@ export const PARTS = [
 <p><b>Lucy</b> is our Fin AI assistant built into Intercom. She's the first point of contact — she responds to customers automatically before a human agent steps in. When a conversation gets escalated to you, read the transcript first so you're not repeating what Lucy already tried.</p>
 `},
   { n:8, id:"l8", title:"GPX Admin", mins:6, body:`
-<p><b>GPX Admin</b> (<code>admin.gpx.co</code>) is where you manage everything behind a customer's account.</p>
-<div class="tbl"><table><tr><th>Area</th><th>What you do there</th></tr>
-<tr><td>Accounts</td><td>Look up customers by email. Check billing details for identity verification. Add account notes. <b>Impersonate the user</b> to see exactly what they see. Suspend users.</td></tr>
-<tr><td>Devices</td><td>Check the IMEI and SIM, open the SIM portal link (the red Twilio, Supersim or att link under the ICCID), view logs and send commands.</td></tr>
-<tr><td>Subscriptions</td><td>Activate, cancel, reactivate, change the renewal date or price.</td></tr>
-<tr><td>Orders</td><td>View orders. Refund with ⋯ → Refund (Admin emails the customer automatically). Create replacement orders.</td></tr>
-<tr><td>Feature flags</td><td>Turn on account features, such as Custom Commands for audio self-tests or the High-Security flag.</td></tr>
-</table></div>
-<h3>Sending a command</h3>
-<p>Go to Send Commands → choose the serial → "other" → "type in a command" → <b>Send Via SMS</b>.</p>
-<h3>Account note shorthand</h3>
+<p><code>admin.gpx.co</code> is the backend control panel for managing customer accounts, devices, subscriptions, orders, and advanced features. Every support action that goes beyond what the customer can self-serve lives here.</p>
+<p>Use the left sidebar to switch between sections. Most workflows start in <b>Accounts</b> — look up the customer first, then navigate to the related section from their account page.</p>
+<h3>Accounts</h3>
+<p>Find customers, verify identity, view account history, and take administrative actions on the account itself.</p>
+<div class="note"><b>Tip</b>Always leave a note before ending the conversation. The next agent has no context unless you write it down.</div>
+<p class="small muted">Watch: Search accounts</p>
+<div class="video-wrap"><iframe src="https://www.loom.com/embed/6d630b3eee704e00916381164285d69d" allowfullscreen></iframe></div>
+<p class="small muted">Watch: Imitate user</p>
+<div class="video-wrap"><iframe src="https://www.loom.com/embed/f95a93f36567414b927e380764db456f" allowfullscreen></iframe></div>
+<p class="small muted">Watch: Suspend user</p>
+<div class="video-wrap"><iframe src="https://www.loom.com/embed/416dce436cca4cd284c7d8a39943a6bb" allowfullscreen></iframe></div>
+<h3>Devices</h3>
+<p>Everything related to the physical tracker — connectivity status, SIM health, command history, and diagnostics.</p>
 <ul>
-<li><code>N/R</code> means a network reset was sent.</li>
-<li><code>OTC</code> means a one-time courtesy was given.</li>
+<li>Check the IMEI and ICCID (SIM ID) to confirm which physical device is on the account.</li>
+<li>Open the SIM portal via the red link beneath the ICCID (labeled Twilio, Supersim, or AT&amp;T). Use it to check data usage, signal status, and whether the SIM is active or suspended.</li>
+<li>View device logs to see recent GPS pings, last-seen timestamps, and connectivity events. This is your first stop when a customer says "my tracker isn't updating."</li>
+<li>Send commands to the device remotely — network resets, audio tests, diagnostics.</li>
 </ul>
-<p>Leave a short note whenever you take an action, so the next agent can see the history.</p>`},
+<div class="note"><b>When to open the SIM portal</b>Any time a tracker is offline or not reporting — confirm the SIM is active and showing data usage before escalating to hardware.</div>
+<p class="small muted">Watch: Search devices</p>
+<div class="video-wrap"><iframe src="https://www.loom.com/embed/bf1d66d906e0439cbcef34f24113a9bc" allowfullscreen></iframe></div>
+<h3>Sending a Command</h3>
+<p>Use <b>Send Commands</b> in the sidebar to trigger device actions remotely. After sending, leave an account note (e.g. <em>N/R sent 10/14</em>). Commands are delivered over SMS to the device, so the tracker must have cellular signal to receive them.</p>
+<h3>Subscriptions</h3>
+<p>Manage the customer's billing plan — activating, pausing, or adjusting their subscription.</p>
+<ul>
+<li>Activate a subscription when a customer has a tracker but hasn't started a plan yet.</li>
+<li>Cancel a subscription to stop future billing. Confirm whether the customer wants immediate cancellation or end-of-period.</li>
+<li>Reactivate a lapsed subscription when a customer wants to resume service.</li>
+<li>Change the renewal date — for example, to give a customer a few extra days when they've had connectivity issues.</li>
+<li>Adjust the price — for courtesy discounts or plan corrections.</li>
+</ul>
+<div class="note warn"><b>Before canceling</b>Always confirm the customer's intent. "Cancel" is permanent billing-wise; if they're having trouble with the device, troubleshoot first.</div>
+<p class="small muted">Watch: Create a new subscription</p>
+<div class="video-wrap"><iframe src="https://www.loom.com/embed/95fdc332d0734b04836669b88ed74f74" allowfullscreen></iframe></div>
+<p class="small muted">Watch: Cancel an existing subscription</p>
+<div class="video-wrap"><iframe src="https://www.loom.com/embed/5911966689564ab096f98302583522d6" allowfullscreen></iframe></div>
+<h3>Orders</h3>
+<p>View purchase history and handle post-sale requests like refunds and replacements.</p>
+<ul>
+<li>View orders to confirm what was purchased, when it shipped, and the current order status.</li>
+<li>Refund: click ⋯ → Refund on the order. GPX Admin automatically sends the customer a refund confirmation email — you don't need to send one manually.</li>
+<li>Create a replacement order when a device is defective and needs to be swapped. Confirm the shipping address before submitting.</li>
+</ul>
+<div class="note"><b>Refund note</b>Only refund if the order is within policy or a manager has approved an exception. Log what was refunded and why in the account notes.</div>
+<p class="small muted">Watch: Search orders</p>
+<div class="video-wrap"><iframe src="https://www.loom.com/embed/a1fc45f70800480597e2c3fa9dec6610" allowfullscreen></iframe></div>
+<p class="small muted">Watch: Create a new order</p>
+<div class="video-wrap"><iframe src="https://www.loom.com/embed/5de565c2236343a989af960c3c45c989" allowfullscreen></iframe></div>
+<h3>Feature Flags</h3>
+<p>Enable non-default features on a per-account basis. Found at the bottom of any account details page. Only enable what's been requested or approved — don't toggle flags speculatively.</p>
+<ul>
+<li><b>Custom Commands</b> — unlocks advanced command options, including audio self-tests. Use when a customer needs to run a self-diagnostic.</li>
+<li><b>High-Security flag</b> — restricts account access and changes. Enable when a customer reports a compromised account or requests enhanced protection.</li>
+</ul>
+<h3>Quick Reference</h3>
+<div class="tbl"><table><tr><th>Situation</th><th>Where to go</th></tr>
+<tr><td>Customer can't log in</td><td>Accounts → verify identity → impersonate to check</td></tr>
+<tr><td>Tracker not updating</td><td>Devices → logs → SIM portal → send N/R if needed</td></tr>
+<tr><td>Customer wants to cancel</td><td>Subscriptions → Cancel</td></tr>
+<tr><td>Device swap needed</td><td>Orders → Create replacement order</td></tr>
+<tr><td>Refund request</td><td>Orders → ⋯ → Refund</td></tr>
+<tr><td>Audio self-test needed</td><td>Feature Flags → enable Custom Commands → Send Commands</td></tr>
+<tr><td>Suspected fraud</td><td>Accounts → Suspend + escalate</td></tr>
+</table></div>`},
   { n:9, id:"l9", title:"SIM portals & the coverage map", mins:4, body:`
 <ul>
 <li><b>SIM portals</b> (Twilio/Super SIM, AT&amp;T, KORE): check that the SIM status is <b>active</b>, see data sessions and which carrier the device is on, run network resets, and check comm plans.</li>
