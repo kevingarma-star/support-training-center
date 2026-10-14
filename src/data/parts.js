@@ -183,12 +183,9 @@ export const PARTS = [
 <h3>Accounts</h3>
 <p>Find customers, verify identity, view account history, and take administrative actions on the account itself.</p>
 <div class="note"><b>Tip</b>Always leave a note before ending the conversation. The next agent has no context unless you write it down.</div>
-<p class="small muted">Watch: Search accounts</p>
-<div class="video-wrap"><iframe src="https://www.loom.com/embed/6d630b3eee704e00916381164285d69d" allowfullscreen></iframe></div>
-<p class="small muted">Watch: Imitate user</p>
-<div class="video-wrap"><iframe src="https://www.loom.com/embed/f95a93f36567414b927e380764db456f" allowfullscreen></iframe></div>
-<p class="small muted">Watch: Suspend user</p>
-<div class="video-wrap"><iframe src="https://www.loom.com/embed/416dce436cca4cd284c7d8a39943a6bb" allowfullscreen></iframe></div>
+<div class="vid-block"><div class="vid-title">Search accounts</div><div class="video-wrap"><iframe src="https://www.loom.com/embed/6d630b3eee704e00916381164285d69d" allowfullscreen></iframe></div></div>
+<div class="vid-block"><div class="vid-title">Imitate user</div><div class="video-wrap"><iframe src="https://www.loom.com/embed/f95a93f36567414b927e380764db456f" allowfullscreen></iframe></div></div>
+<div class="vid-block"><div class="vid-title">Suspend user</div><div class="video-wrap"><iframe src="https://www.loom.com/embed/416dce436cca4cd284c7d8a39943a6bb" allowfullscreen></iframe></div></div>
 <h3>Devices</h3>
 <p>Everything related to the physical tracker — connectivity status, SIM health, command history, and diagnostics.</p>
 <ul>
@@ -198,8 +195,7 @@ export const PARTS = [
 <li>Send commands to the device remotely — network resets, audio tests, diagnostics.</li>
 </ul>
 <div class="note"><b>When to open the SIM portal</b>Any time a tracker is offline or not reporting — confirm the SIM is active and showing data usage before escalating to hardware.</div>
-<p class="small muted">Watch: Search devices</p>
-<div class="video-wrap"><iframe src="https://www.loom.com/embed/bf1d66d906e0439cbcef34f24113a9bc" allowfullscreen></iframe></div>
+<div class="vid-block"><div class="vid-title">Search devices</div><div class="video-wrap"><iframe src="https://www.loom.com/embed/bf1d66d906e0439cbcef34f24113a9bc" allowfullscreen></iframe></div></div>
 <h3>Sending a Command</h3>
 <p>Use <b>Send Commands</b> in the sidebar to trigger device actions remotely. After sending, leave an account note (e.g. <em>N/R sent 10/14</em>). Commands are delivered over SMS to the device, so the tracker must have cellular signal to receive them.</p>
 <h3>Subscriptions</h3>
@@ -212,10 +208,8 @@ export const PARTS = [
 <li>Adjust the price — for courtesy discounts or plan corrections.</li>
 </ul>
 <div class="note warn"><b>Before canceling</b>Always confirm the customer's intent. "Cancel" is permanent billing-wise; if they're having trouble with the device, troubleshoot first.</div>
-<p class="small muted">Watch: Create a new subscription</p>
-<div class="video-wrap"><iframe src="https://www.loom.com/embed/95fdc332d0734b04836669b88ed74f74" allowfullscreen></iframe></div>
-<p class="small muted">Watch: Cancel an existing subscription</p>
-<div class="video-wrap"><iframe src="https://www.loom.com/embed/5911966689564ab096f98302583522d6" allowfullscreen></iframe></div>
+<div class="vid-block"><div class="vid-title">Create a new subscription</div><div class="video-wrap"><iframe src="https://www.loom.com/embed/95fdc332d0734b04836669b88ed74f74" allowfullscreen></iframe></div></div>
+<div class="vid-block"><div class="vid-title">Cancel an existing subscription</div><div class="video-wrap"><iframe src="https://www.loom.com/embed/5911966689564ab096f98302583522d6" allowfullscreen></iframe></div></div>
 <h3>Orders</h3>
 <p>View purchase history and handle post-sale requests like refunds and replacements.</p>
 <ul>
@@ -224,10 +218,8 @@ export const PARTS = [
 <li>Create a replacement order when a device is defective and needs to be swapped. Confirm the shipping address before submitting.</li>
 </ul>
 <div class="note"><b>Refund note</b>Only refund if the order is within policy or a manager has approved an exception. Log what was refunded and why in the account notes.</div>
-<p class="small muted">Watch: Search orders</p>
-<div class="video-wrap"><iframe src="https://www.loom.com/embed/a1fc45f70800480597e2c3fa9dec6610" allowfullscreen></iframe></div>
-<p class="small muted">Watch: Create a new order</p>
-<div class="video-wrap"><iframe src="https://www.loom.com/embed/5de565c2236343a989af960c3c45c989" allowfullscreen></iframe></div>
+<div class="vid-block"><div class="vid-title">Search orders</div><div class="video-wrap"><iframe src="https://www.loom.com/embed/a1fc45f70800480597e2c3fa9dec6610" allowfullscreen></iframe></div></div>
+<div class="vid-block"><div class="vid-title">Create a new order</div><div class="video-wrap"><iframe src="https://www.loom.com/embed/5de565c2236343a989af960c3c45c989" allowfullscreen></iframe></div></div>
 <h3>Feature Flags</h3>
 <p>Enable non-default features on a per-account basis. Found at the bottom of any account details page. Only enable what's been requested or approved — don't toggle flags speculatively.</p>
 <ul>
