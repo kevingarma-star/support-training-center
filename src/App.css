@@ -102,6 +102,11 @@
 .note.warn b:first-child { color: var(--amber); }
 .note.stop { background: var(--bad-soft); }
 .note.stop b:first-child { color: var(--bad); }
+.vid-block { margin: 16px 0 24px; }
+.vid-title { font-size: 15.5px; font-weight: 600; color: var(--ink); margin-bottom: 8px; display: flex; align-items: center; gap: 9px; }
+.vid-title::before { content: "▶"; font-size: 8px; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; padding-left: 2px; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin: 0; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 .steps { counter-reset: s; list-style: none; padding: 0 !important; }
 .steps > li { counter-increment: s; position: relative; padding-left: 36px; margin: 8px 0; }
 .steps > li::before { content: counter(s); position: absolute; left: 0; top: 1px; width: 24px; height: 24px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12.5px; display: grid; place-items: center; }
