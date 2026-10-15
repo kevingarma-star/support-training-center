@@ -5,22 +5,13 @@ function VideoCard({ title, loom }) {
   return (
     <div className="vc">
       <div className="vc-title">{title}</div>
-      {loom ? (
-        <div className="video-wrap">
-          <iframe
-            src={`https://www.loom.com/embed/${loom}`}
-            allowFullScreen
-            title={title}
-          />
-        </div>
-      ) : (
-        <div className="vc-ph">
-          <div className="vc-ph-in">
-            <div className="vc-ph-ico">▶</div>
-            <span>Coming soon</span>
-          </div>
-        </div>
-      )}
+      <div className="video-wrap">
+        <iframe
+          src={`https://www.loom.com/embed/${loom}`}
+          allowFullScreen
+          title={title}
+        />
+      </div>
     </div>
   );
 }
@@ -28,7 +19,7 @@ function VideoCard({ title, loom }) {
 export default function VideosPage() {
   const [active, setActive] = useState('all');
 
-  const totalReady = VIDEO_CATEGORIES.reduce((s, c) => s + c.videos.filter(v => v.loom).length, 0);
+  const total = VIDEO_CATEGORIES.reduce((s, c) => s + c.videos.length, 0);
 
   const visibleCats = active === 'all'
     ? VIDEO_CATEGORIES
@@ -39,7 +30,7 @@ export default function VideosPage() {
       <div className="modhead">
         <span className="eyebrow">GPX Admin</span>
         <h1>Video Walkthroughs</h1>
-        <p>Step-by-step Loom guides organized by section. <span className="chip prog" style={{ verticalAlign: 'middle' }}>{totalReady} ready</span></p>
+        <p>Step-by-step Loom guides organized by section. <span className="chip prog" style={{ verticalAlign: 'middle' }}>{total} videos</span></p>
       </div>
 
       <div className="tabs">
@@ -48,21 +39,18 @@ export default function VideosPage() {
           onClick={() => setActive('all')}
         >
           All
-          <span className="vc-badge">{totalReady}</span>
+          <span className="vc-badge">{total}</span>
         </button>
-        {VIDEO_CATEGORIES.map(cat => {
-          const ready = cat.videos.filter(v => v.loom).length;
-          return (
-            <button
-              key={cat.id}
-              className={`tab${active === cat.id ? ' active' : ''}`}
-              onClick={() => setActive(cat.id)}
-            >
-              {cat.label}
-              {ready > 0 && <span className="vc-badge">{ready}</span>}
-            </button>
-          );
-        })}
+        {VIDEO_CATEGORIES.map(cat => (
+          <button
+            key={cat.id}
+            className={`tab${active === cat.id ? ' active' : ''}`}
+            onClick={() => setActive(cat.id)}
+          >
+            {cat.label}
+            <span className="vc-badge">{cat.videos.length}</span>
+          </button>
+        ))}
       </div>
 
       {visibleCats.map(cat => (
@@ -70,9 +58,6 @@ export default function VideosPage() {
           {active === 'all' && (
             <div className="section-h" style={{ marginTop: 28 }}>
               <h2>{cat.label}</h2>
-              <span className="chip">
-                {cat.videos.filter(v => v.loom).length}/{cat.videos.length} videos
-              </span>
             </div>
           )}
           <div className="vid-grid">
