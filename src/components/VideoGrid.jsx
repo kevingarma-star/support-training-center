@@ -1,21 +1,6 @@
 import { useState } from 'react';
 import { VIDEO_CATEGORIES } from '../data/videos.js';
 
-function VideoCard({ title, loom }) {
-  return (
-    <div className="vc">
-      <div className="vc-title">{title}</div>
-      <div className="video-wrap">
-        <iframe
-          src={`https://www.loom.com/embed/${loom}`}
-          allowFullScreen
-          title={title}
-        />
-      </div>
-    </div>
-  );
-}
-
 export default function VideoGrid() {
   const [active, setActive] = useState('all');
 
@@ -51,11 +36,18 @@ export default function VideoGrid() {
               <h2>{cat.label}</h2>
             </div>
           )}
-          <div className="vid-grid">
-            {cat.videos.map((v, i) => (
-              <VideoCard key={i} title={v.title} loom={v.loom} />
-            ))}
-          </div>
+          {cat.videos.map((v, i) => (
+            <div key={i} className="vid-block">
+              <div className="vid-title">{v.title}</div>
+              <div className="video-wrap">
+                <iframe
+                  src={`https://www.loom.com/embed/${v.loom}`}
+                  allowFullScreen
+                  title={v.title}
+                />
+              </div>
+            </div>
+          ))}
         </div>
       ))}
     </>
