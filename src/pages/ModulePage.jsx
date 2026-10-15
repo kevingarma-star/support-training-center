@@ -4,6 +4,7 @@ import { PARTS } from '../data/index.js';
 import Prose from '../components/Prose.jsx';
 import Quiz from '../components/Quiz.jsx';
 import SlideLesson from '../components/SlideLesson.jsx';
+import VideoGrid from '../components/VideoGrid.jsx';
 
 const PART_COLORS = [
   '#0B7A76','#3A5BD9','#C2410C','#7C3AED',
@@ -25,11 +26,13 @@ export default function ModulePage({ completedLessons, quizScores, completeLesso
 
   const [activeTab, setActiveTab] = useState(() => getDefaultTab(part, completedLessons, quizScores));
   const [lastPartId, setLastPartId] = useState(partId);
+  const [lessonView, setLessonView] = useState('content');
 
   // Reset tab when navigating to a different module
   if (partId !== lastPartId) {
     setLastPartId(partId);
     setActiveTab(getDefaultTab(part, completedLessons, quizScores));
+    setLessonView('content');
   }
 
   if (!part) {
@@ -79,7 +82,7 @@ export default function ModulePage({ completedLessons, quizScores, completeLesso
             <button
               key={l.id}
               className={`tab${activeTab === l.id ? ' active' : ''}`}
-              onClick={() => setActiveTab(l.id)}
+              onClick={() => { setActiveTab(l.id); setLessonView('content'); }}
             >
               {done && <span className="tick">✓ </span>}
               {l.title}
@@ -102,10 +105,31 @@ export default function ModulePage({ completedLessons, quizScores, completeLesso
         <div className="lesson">
           <h2>{activeLesson.title}</h2>
           <div className="sub">{activeLesson.mins} min read</div>
-          {activeLesson.type === 'slides'
-            ? <SlideLesson lesson={activeLesson} />
-            : <Prose html={activeLesson.body} />
-          }
+
+          {activeLesson.hasVideos && (
+            <div className="tabs" style={{ margin: '14px 0 20px' }}>
+              <button
+                className={`tab${lessonView === 'content' ? ' active' : ''}`}
+                onClick={() => setLessonView('content')}
+              >
+                Overview
+              </button>
+              <button
+                className={`tab${lessonView === 'videos' ? ' active' : ''}`}
+                onClick={() => setLessonView('videos')}
+              >
+                ▶ Videos
+              </button>
+            </div>
+          )}
+
+          {lessonView === 'content' && (
+            activeLesson.type === 'slides'
+              ? <SlideLesson lesson={activeLesson} />
+              : <Prose html={activeLesson.body} />
+          )}
+          {activeLesson.hasVideos && lessonView === 'videos' && <VideoGrid />}
+
           <div className="lessonfoot">
             <div />
             {!completedLessons[activeLesson.id] ? (

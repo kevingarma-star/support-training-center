@@ -177,7 +177,7 @@ export const PARTS = [
 <h3>How Lucy fits in</h3>
 <p><b>Lucy</b> is our Fin AI assistant built into Intercom. She's the first point of contact — she responds to customers automatically before a human agent steps in. When a conversation gets escalated to you, read the transcript first so you're not repeating what Lucy already tried.</p>
 `},
-  { n:8, id:"l8", title:"GPX Admin", mins:6, body:`
+  { n:8, id:"l8", title:"GPX Admin", mins:6, hasVideos: true, body:`
 <p><code>admin.gpx.co</code> is the backend control panel for managing customer accounts, devices, subscriptions, orders, and advanced features. Every support action that goes beyond what the customer can self-serve lives here.</p>
 <p>Use the left sidebar to switch between sections. Most workflows start in <b>Accounts</b> — look up the customer first, then navigate to the related section from their account page.</p>
 <h3>Accounts</h3>
