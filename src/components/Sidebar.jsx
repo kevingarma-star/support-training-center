@@ -15,6 +15,7 @@ export default function Sidebar({ xp, levelLabel, xpPct, completedLessons, quizS
 
   const extraLinks = [
     { to: '/practice', label: 'Practice Lab', icon: '✍' },
+    { to: '/videos', label: 'Videos', icon: '▶' },
     { to: '/resources', label: 'Resources', icon: '📚' },
     { to: '/appendix', label: 'Appendix', icon: '📎' },
   ];

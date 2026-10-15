@@ -6,6 +6,7 @@ import ModulePage from './pages/ModulePage.jsx';
 import PracticePage from './pages/PracticePage.jsx';
 import ResourcesPage from './pages/ResourcesPage.jsx';
 import AppendixPage from './pages/AppendixPage.jsx';
+import VideosPage from './pages/VideosPage.jsx';
 import { useProgress } from './hooks/useProgress.js';
 import './App.css';
 
@@ -78,6 +79,7 @@ export default function App() {
             />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/appendix" element={<AppendixPage />} />
+            <Route path="/videos" element={<VideosPage />} />
           </Routes>
         </main>
       </div>
