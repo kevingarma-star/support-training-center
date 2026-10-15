@@ -4,6 +4,7 @@ import { PARTS } from '../data/index.js';
 import Prose from '../components/Prose.jsx';
 import Quiz from '../components/Quiz.jsx';
 import SlideLesson from '../components/SlideLesson.jsx';
+import VideoGrid from '../components/VideoGrid.jsx';
 
 const PART_COLORS = [
   '#0B7A76','#3A5BD9','#C2410C','#7C3AED',
@@ -106,6 +107,7 @@ export default function ModulePage({ completedLessons, quizScores, completeLesso
             ? <SlideLesson lesson={activeLesson} />
             : <Prose html={activeLesson.body} />
           }
+          {activeLesson.hasVideos && <VideoGrid />}
           <div className="lessonfoot">
             <div />
             {!completedLessons[activeLesson.id] ? (
