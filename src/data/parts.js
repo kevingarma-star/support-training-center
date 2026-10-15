@@ -241,7 +241,7 @@ export const PARTS = [
 <li><b>SIM portals</b> (Twilio/Super SIM, AT&amp;T, KORE): check that the SIM status is <b>active</b>, see data sessions and which carrier the device is on, run network resets, and check comm plans.</li>
 <li>Most older SIMs are <b>Twilio</b>. Newer 4G units ship with <b>AT&amp;T</b> SIMs. The AssetTrack Mini uses a <b>KORE</b> SIM that works on both AT&amp;T and T-Mobile.</li>
 <li>AT&amp;T has no network-reset button. If an AT&amp;T SIM shows no phone number in Admin, use Sync Phone Number, or Swap SIM with the ICCID unchanged.</li>
-<li><b>FCC coverage map:</b> choose the layer that matches the SIM: T-Mobile LTE Data, T-Mobile LTE Voice (for audio), or AT&amp;T Mobility LTE Data.</li>
+<li><b>FCC coverage map:</b> <a href="https://fcc.maps.arcgis.com/apps/webappviewer/index.html?id=6c1b2e73d9d749cdb7bc88a0d1bdd25b" target="_blank" rel="noopener">Open FCC Coverage Map</a> — choose the layer that matches the SIM: T-Mobile LTE Data, T-Mobile LTE Voice (for audio), or AT&amp;T Mobility LTE Data.</li>
 </ul>
 <p class="small muted">There are Loom walkthroughs for checking SIM status, data sessions and coverage in the Resource Library.</p>`},
   { n:10, id:"l10", title:"Stripe, Shopify & ShipStation", mins:4, body:`
