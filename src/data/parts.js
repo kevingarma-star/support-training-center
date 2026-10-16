@@ -251,27 +251,6 @@ export const PARTS = [
 <tr><td><b>ShipStation</b></td><td>Order tracking, "Create Return" labels, checking what shipped</td><td>Check what shipped before assuming a wrong item</td></tr>
 </table></div>
 <p>Charges show on bank statements as <b>"SP AFF* Logistimatics."</b> If a customer doesn't recognize a charge, look for a matching order.</p>`},
-  { n:11, id:"l11", title:"The customer app & web portal", mins:5, body:`
-<ul>
-<li><b>Apps:</b> "Logistimatics" on iOS and Android. <b>Web:</b> <code>app.logistimatics.com</code>. The app was rebuilt in 2026 with the same logins and features in a new layout. If a customer reports a glitch, ask them to update the app first.</li>
-<li><b>Tabs under the map:</b> Map, Info (the tracker's phone number and audio minutes), Commands and Alerts.</li>
-</ul>
-<div class="tbl"><table><tr><th>Customer task</th><th>Where</th></tr>
-<tr><td>Update the card on file</td><td><code>app.logistimatics.com/manage/payment</code></td></tr>
-<tr><td>Cancel or reactivate a subscription</td><td><code>app.logistimatics.com/manage/subscriptions</code></td></tr>
-<tr><td>Download an invoice</td><td>Manage → Order History → ⋯ → View Invoice</td></tr>
-<tr><td>Reset a password</td><td><code>app.logistimatics.com/forgot</code></td></tr>
-<tr><td>Set up alerts</td><td>App: Account → Alerts Settings. Web: Menu → Alerts. Push notifications can only be set in the app.</td></tr>
-<tr><td>Create a geofence</td><td>Menu → Geofences → New, then turn on enter/exit alerts for that tracker</td></tr>
-<tr><td>Invite other users</td><td>Web: Manage → User Access → Invite User. The invite expires after <b>36 hours</b>.</td></tr>
-<tr><td>Change the reporting interval</td><td>Tracker → Commands → New → choose a mode → Send</td></tr>
-</table></div>
-<h3>Map basics</h3>
-<ul>
-<li><b>Pin colors:</b> blue or green means online, red means stationary or not in a data session, gray means offline. A light-blue circle is a <b>cell fix</b>, which is less accurate.</li>
-<li><b>History</b> goes back 90 days. Customers who need a permanent record should save a <b>report</b>, which is kept indefinitely.</li>
-<li><b>Geofence alerts</b> fire only when a new report lands on the other side of the fence from the previous one.</li>
-</ul>`},
   { n:12, id:"l12", title:"Team tools & daily rhythm", mins:3, body:`
 <div class="tbl"><table><tr><th>Tool</th><th>What it's for</th></tr>
 <tr><td>Slack</td><td>Team chat and quick questions (logistimatics.slack.com, sign in with Google)</td></tr>
