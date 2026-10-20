@@ -282,13 +282,6 @@ export const PARTS = [
   quizTitle:"Product Knowledge Quiz",
   lessons:[
   { n:13, id:"l13", title:"The lineup at a glance", mins:6, type:'lineup' },
-  { n:14, id:"l14", title:"Mobile-200 deep dive", mins:3, body:`
-<h3>Hardware notes</h3>
-<ul>
-<li>The microphone is at the <b>charging-port end</b> and picks up sound within a few feet. For the best audio, confirm the tracker is inside the cabin — not in a trunk or under the seat.</li>
-</ul>
-<h3>Setup</h3>
-<p>Onboarding checklist: download the app, set up the profile, explore the tabs, create geofences, and set the SOS number for audio. Setup takes about 30 minutes, and we can offer a walkthrough call.</p>`},
   { n:15, id:"l15", title:"Live audio — how it works", mins:5, body:`
 <p>The customer calls the tracker's phone number and listens live. <b>Nothing is recorded</b>, and there are no alerts triggered by sound — it's passive listening only.</p>
 <h3>Minutes</h3>
