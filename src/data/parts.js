@@ -252,22 +252,20 @@ export const PARTS = [
 </table></div>
 <p>Charges show on bank statements as <b>"SP AFF* Logistimatics."</b> If a customer doesn't recognize a charge, look for a matching order.</p>`},
   { n:12, id:"l12", title:"Team tools & daily rhythm", mins:3, body:`
-<div class="tbl"><table><tr><th>Tool</th><th>What it's for</th></tr>
-<tr><td>Slack</td><td>Team chat and quick questions (logistimatics.slack.com, sign in with Google)</td></tr>
-<tr><td>Notion</td><td>Internal knowledge base: the Device Troubleshooting Guide, policies, standups</td></tr>
-<tr><td>Google Drive</td><td>Macro sheets, reports, EOW updates</td></tr>
-<tr><td>Loom</td><td>Short how-to videos</td></tr>
-<tr><td>Zoom</td><td>Meetings and customer callbacks</td></tr>
-<tr><td>Lattice</td><td>Goals, updates and performance reviews</td></tr>
+<p>Our team works across a handful of tools, and a simple routine keeps everyone aligned and ready to help customers. This page covers where to find things and how your day and week are structured.</p>
+<h3>Your toolkit</h3>
+<div class="tbl"><table><tr><th>Tool</th><th>Use it for</th><th>Good to know</th></tr>
+<tr><td>Slack</td><td>Team chat and quick questions</td><td>Sign in with Google at logistimatics.slack.com. If you're stuck, ask. Someone will jump in.</td></tr>
+<tr><td>Notion</td><td>Our internal knowledge base</td><td>Home of the Device Troubleshooting Guide, policies, and standup notes. Check it before escalating.</td></tr>
+<tr><td>Google Drive</td><td>Macro sheets, reports, and EOW updates</td><td>Your go-to for shared documents and anything you'll reuse.</td></tr>
+<tr><td>Loom</td><td>Short how-to videos</td><td>Great for learning a process quickly, or recording one to share with the team.</td></tr>
+<tr><td>Google Voice</td><td>Customer callbacks</td><td>Used for callbacks when needed.</td></tr>
+<tr><td>Lattice</td><td>Goals, updates, and performance reviews</td><td>Keep your goals current so reviews are easy and nothing is a surprise.</td></tr>
 </table></div>
-<h3>The team's weekly rhythm</h3>
-<ul>
-<li><b>Every day:</b> post your start-of-day report (top 3 priorities), work support requests, then post your end-of-day report.</li>
-<li><b>Mon &amp; Fri:</b> CS Checkpoint.</li>
-<li><b>Wed:</b> Support Huddle, where we share wins and case studies.</li>
-<li><b>Thu:</b> bi-weekly 1:1 with your lead and the bi-weekly All-Hands.</li>
-<li><b>Fri:</b> End of Week update.</li>
-</ul>`}
+<h3>Your daily rhythm</h3>
+<p><b>GPX Stand-up (every day):</b> A quick check-in where you share what you'll be working on for the day. It's reporting and updating only, so keep it short: what's on your plate and anything that might get in the way. After that, you're off to work through support requests.</p>
+<h3>Your weekly rhythm</h3>
+<p><b>End of Week update (Fridays):</b> At the end of the week, you'll share a wrap-up of how the week went, including what got done and anything still open going into the next one.</p>`}
   ],
   quiz:[
   {q:"Where do you issue a refund for an order that exists in Admin?", o:["Stripe","Admin: order → ⋯ → Refund","Intercom","ShipStation"], a:1, why:"Refund through Admin whenever there's an order. It also notifies the customer automatically."},
