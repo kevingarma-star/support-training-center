@@ -249,8 +249,7 @@ export const PARTS = [
 <tr><td><b><a href="https://dashboard.stripe.com/login?redirect=%2Fpayments%3Flimit%3D10" target="_blank" rel="noopener">Stripe</a></b></td><td>Finding a charge by email, order ID or last 4 digits. Refunding charges that have no Admin order. Blocking fraudulent cards.</td><td>Refund through Admin whenever there's an order. Get proof (last 4 digits or a screenshot) before a Stripe refund.</td></tr>
 <tr><td><b><a href="https://admin.shopify.com/store/fba878-4/orders" target="_blank" rel="noopener">Shopify</a></b></td><td>Orders placed through Shopify, and refunds on those orders</td><td>Refund Shopify orders in Shopify</td></tr>
 <tr><td><b><a href="https://ship11.shipstation.com/home" target="_blank" rel="noopener">ShipStation</a></b></td><td>Order tracking, "Create Return" labels, checking what shipped</td><td>Check what shipped before assuming a wrong item</td></tr>
-</table></div>
-<p>Charges show on bank statements as <b>"SP AFF* Logistimatics."</b> If a customer doesn't recognize a charge, look for a matching order.</p>`},
+</table></div>`},
   { n:12, id:"l12", title:"Team tools & daily rhythm", mins:3, body:`
 <div class="tbl"><table><tr><th>Tool</th><th>What it's for</th></tr>
 <tr><td>Slack</td><td>Team chat and quick questions (logistimatics.slack.com, sign in with Google)</td></tr>
