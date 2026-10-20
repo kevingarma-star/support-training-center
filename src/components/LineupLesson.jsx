@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 
+const CDN = 'https://cdn.shopify.com/s/files/1/0693/9557/8915/files/';
+
 const DEVICES = [
   {
     id: 'mobile200',
     name: 'Mobile-200 (200G)',
+    tagline: 'GPS Tracker with Live Audio',
     badge: 'Flagship',
     badgeMod: 'prog',
+    img: CDN + 'Mobile-200-Front.png',
     power: 'Rechargeable · Magnetic · IP67',
     reporting: '30 s moving · 1 h parked',
     battery: '~7–10 days',
@@ -39,37 +43,11 @@ const DEVICES = [
 `,
   },
   {
-    id: 'carcharger',
-    name: 'Car Charger',
-    badge: 'Discontinued',
-    badgeMod: 'warn',
-    power: '12V accessory port',
-    reporting: 'Every 400 m traveled',
-    battery: 'Runs on vehicle power',
-    audio: true,
-    detail: `
-<p class="lead">The Car Charger draws power from the 12V accessory port (cigarette lighter socket). It has been discontinued — we still support existing customers, but <b>never recommend it as a new purchase</b>.</p>
-<h3>Key details</h3>
-<ul>
-<li>Reports every 400 meters traveled — not on a fixed time interval. A parked vehicle won't ping until it moves.</li>
-<li>Only supports <b>one SOS number</b> (vs. two on the Mobile-200).</li>
-<li>Has the best audio quality of any model in the lineup. Moot for new customers since it's discontinued.</li>
-</ul>
-<h3>Common support issue</h3>
-<ul>
-<li><b>"It stops reporting when I park."</b> Some vehicles only power the 12V port while the ignition is on. To test: plug a phone charger into the same port with the car off. If it doesn't charge, that's the cause — the port loses power when the ignition is off. The tracker is working correctly.</li>
-</ul>
-<h3>What not to do</h3>
-<ul>
-<li>Don't recommend the Car Charger to a customer shopping for a new device. Guide them to the Mobile-200 (which also supports audio) or the Protect Plus (no audio, longer battery).</li>
-</ul>
-<div class="note"><b>Red LED = getting power</b>A red LED means the Car Charger is receiving power from the port. If the customer reports no light and no updates, check whether the port is ignition-controlled first.</div>
-`,
-  },
-  {
     id: 'protectplus',
     name: 'Protect Plus',
+    tagline: '4G GPS Tracker · 18-Month Battery',
     badge: null,
+    img: CDN + 'Protect-Plus-Front-2.png',
     power: 'Rechargeable',
     reporting: '30 s moving · 1 h parked',
     battery: '~2 weeks',
@@ -88,13 +66,50 @@ const DEVICES = [
 </ul>
 <h3>Support patterns</h3>
 <p>Similar to the Mobile-200 — placement is the first thing to check when a customer reports missed updates. Same Admin diagnostics apply.</p>
+<ul>
+<li>Press the top button to see the blue LEDs. The power switch and SIM are under the front plate and a gasket.</li>
+<li>Anti-tamper alerts (removal, cover open, installation, vibration) can drain the battery faster than expected.</li>
+<li>After 5 minutes stationary it hibernates — this is normal.</li>
+</ul>
 <div class="note"><b>Confirm no audio needed</b>Protect Plus has no audio and never will. If a customer buys it expecting audio, that's a return. Ask directly before recommending.</div>
+`,
+  },
+  {
+    id: 'pocket',
+    name: 'Pocket Tracker / Micro-431',
+    tagline: 'Small GPS Tracker · Personal Tracking',
+    badge: null,
+    img: CDN + 'Discrete_GPS_Tracker.jpg',
+    power: 'USB-C rechargeable',
+    reporting: 'Every 400 m traveled',
+    battery: '~10 days',
+    audio: false,
+    detail: `
+<p class="lead">A small, portable USB-C tracker. Its biggest differentiator — and its most common source of confusion — is that it reports on <b>distance traveled, not time</b>.</p>
+<h3>Distance-based reporting — the key gotcha</h3>
+<ul>
+<li>The tracker pings every <b>400 meters moved</b>. If the device is sitting still, it does not send updates.</li>
+<li>Customers who expect a regular heartbeat (like the Mobile-200's 30-second ping) will be confused when a parked device shows no new updates. This is expected behavior — not a malfunction.</li>
+<li>For stationary monitoring, this is the wrong device. Recommend the Mobile-200 or Protect Plus instead.</li>
+</ul>
+<h3>Tips</h3>
+<ul>
+<li>Hold the SOS button until it vibrates to confirm power and force a report.</li>
+<li>Battery life depends on reporting interval: ~10 days at default, 14–17 days at 15-minute intervals, about a month at hourly.</li>
+</ul>
+<h3>Support patterns</h3>
+<ul>
+<li><b>"It's not updating."</b> First question: is the device currently stationary? If it hasn't moved 400 m, it won't ping. This alone resolves most calls on this device.</li>
+</ul>
+<div class="note warn"><b>Distance, not time</b>Always set this expectation before a customer buys. Customers expecting minute-by-minute updates will be frustrated — this device only pings when it moves 400 m.</div>
 `,
   },
   {
     id: 'roadwired',
     name: 'Road-Wired',
+    tagline: '5G Hardwired GPS Tracker',
     badge: null,
+    img: CDN + 'Road-Wired-Front.jpg',
     power: 'Hardwired to 12V',
     reporting: '30 s moving · 1 h parked',
     battery: 'Backup battery &lt;24 h',
@@ -106,6 +121,13 @@ const DEVICES = [
 <li>Same real-time cadence as Mobile-200 and Protect Plus (30 s moving, 1 h parked) while the vehicle is running.</li>
 <li>Has a backup battery, but it only lasts <b>under 24 hours</b> once disconnected from vehicle power. It's a failsafe — not a long-term power source.</li>
 <li><b>Professional mechanic install is strongly recommended.</b> Incorrect wiring can damage the vehicle or the tracker. Customers who DIY and run into issues — start by asking how it was installed.</li>
+</ul>
+<h3>Wiring</h3>
+<ul>
+<li><b>Red</b> → 12V constant power</li>
+<li><b>Black</b> → Ground</li>
+<li><b>Orange</b> → Ignition (optional)</li>
+<li>Use the PWR connector. Do not install under the hood or in the trunk.</li>
 </ul>
 <h3>When to recommend it</h3>
 <ul>
@@ -120,37 +142,11 @@ const DEVICES = [
 `,
   },
   {
-    id: 'pocket',
-    name: 'Pocket Tracker / Micro-431',
-    badge: null,
-    power: 'USB-C rechargeable',
-    reporting: 'Every 400 m traveled',
-    battery: '~10 days',
-    audio: false,
-    detail: `
-<p class="lead">A small, portable USB-C tracker. Its biggest differentiator — and its most common source of confusion — is that it reports on <b>distance traveled, not time</b>.</p>
-<h3>Distance-based reporting — the key gotcha</h3>
-<ul>
-<li>The tracker pings every <b>400 meters moved</b>. If the device is sitting still, it does not send updates.</li>
-<li>Customers who expect a regular heartbeat (like the Mobile-200's 30-second ping) will be confused when a parked device shows no new updates. This is expected behavior — not a malfunction.</li>
-<li>For stationary monitoring, this is the wrong device. Recommend the Mobile-200 or Protect Plus instead.</li>
-</ul>
-<h3>When to recommend it</h3>
-<ul>
-<li>Tracking a person, bag, or moving asset where you only care about the trail and don't need a real-time "is it moving right now" feed.</li>
-<li>Battery lasts up to ~10 days on a charge.</li>
-</ul>
-<h3>Support patterns</h3>
-<ul>
-<li><b>"It's not updating."</b> First question: is the device currently stationary? If it hasn't moved 400 m, it won't ping. This alone resolves most calls on this device.</li>
-</ul>
-<div class="note warn"><b>Distance, not time</b>Always set this expectation before a customer buys. Customers expecting minute-by-minute updates will be frustrated — this device only pings when it moves 400 m.</div>
-`,
-  },
-  {
     id: 'assetmini',
     name: 'AssetTrack Mini',
+    tagline: '5-Year GPS Tracker · Construction Equipment',
     badge: null,
+    img: CDN + 'AssetTrack-Mini.png',
     power: 'Long-life battery',
     reporting: 'Every 24 hours',
     battery: '~5 years',
@@ -162,11 +158,11 @@ const DEVICES = [
 <li>Reports once every 24 hours. There is no way to get a more frequent update.</li>
 <li><b>Cannot be woken on demand.</b> Commands and geofence alerts only trigger at the next scheduled check-in. If a customer sends a command and nothing happens for hours, that's normal.</li>
 </ul>
-<h3>When to recommend it</h3>
+<h3>Hardware tips</h3>
 <ul>
-<li>Tracking trailers, heavy equipment, tools, or containers that sit in one place for days, weeks, or months at a time.</li>
-<li>Customer doesn't need live tracking — just a once-a-day location snapshot.</li>
-<li>Five-year battery makes it ideal for assets that are hard to access regularly.</li>
+<li>Magnetic side toward the asset, antenna side up.</li>
+<li>Battery life: ~5 years at 24-hour reporting, ~6 months at hourly reporting.</li>
+<li>If it only shows Wi-Fi or cell tower locations (not GPS), move it somewhere with a better view of the sky.</li>
 </ul>
 <h3>Common mismatch scenario</h3>
 <p>A customer orders an AssetTrack Mini and calls in expecting live updates. Before troubleshooting anything, confirm what they actually need. If they need real-time, this is the wrong device — recommend the Mobile-200 or Protect Plus and initiate a return/swap.</p>
@@ -176,7 +172,9 @@ const DEVICES = [
   {
     id: 'asset432',
     name: 'Asset 432 / 422',
+    tagline: 'Equipment & Asset Tracker · 3-Year Battery',
     badge: null,
+    img: CDN + 'asset_422_gps_tracker_front.jpg',
     power: 'Battery',
     reporting: '1–4 times a day',
     battery: 'Long life',
@@ -188,6 +186,10 @@ const DEVICES = [
 <li>Check-in frequency of 1–4 times a day depending on settings.</li>
 <li><b>Cannot be woken on demand.</b> Commands and geofence alerts only process at the next check-in. A customer who sends a command and waits hours is experiencing normal behavior.</li>
 <li>Long battery life — designed to last months between charges depending on reporting frequency.</li>
+</ul>
+<h3>Battery note</h3>
+<ul>
+<li>Asset 432 replacement batteries aren't sold on the website. Order them manually, and charge the card on file only with the customer's explicit OK.</li>
 </ul>
 <h3>When to recommend it</h3>
 <ul>
@@ -204,8 +206,10 @@ const DEVICES = [
   {
     id: 'smartlabel',
     name: 'SmartLabel',
+    tagline: 'Disposable Shipment Tracker · 60-Day Battery',
     badge: 'No subscription',
     badgeMod: 'good',
+    img: CDN + 'SmartLabel-Disposable-Tracker-Size.png',
     power: 'Disposable',
     reporting: 'Broadcasts every 2 min',
     battery: '~2 months',
@@ -215,21 +219,56 @@ const DEVICES = [
 <h3>How it actually works</h3>
 <ul>
 <li>The label broadcasts a Bluetooth signal every 2 minutes. It does not connect to GPS satellites or cellular networks.</li>
-<li>Location is reported when <b>an iPhone with Find My enabled passes nearby</b> and picks up the broadcast. Apple's Find My network relays the location — this is not the Logistimatics app.</li>
+<li>Serials start with <code>SL</code>. It uses <b>Apple's Find My network</b> — location is relayed when an iPhone with Find My enabled passes nearby.</li>
+<li>The label is <b>inactive until its tab is cut</b>. The first location typically appears 15–30 minutes after cutting, if iPhones are nearby.</li>
 <li>In areas with few iPhones nearby, the label goes silent — even if it's still powered on and broadcasting.</li>
+</ul>
+<h3>Transit gaps are normal</h3>
+<ul>
+<li>Expect hours or days of silence on rail shipments.</li>
+<li>Ocean and air shipments mostly update at ports and airports where iPhones are concentrated.</li>
 </ul>
 <h3>When to recommend it</h3>
 <ul>
-<li>Tracking packages, envelopes, or shipments in transit through populated areas (cities, major shipping hubs).</li>
-<li>Customer wants one-time tracking without a monthly subscription — it's a single purchase.</li>
-<li>Battery lasts approximately 2 months, then it's disposable.</li>
+<li>Tracking packages, envelopes, or shipments in transit through populated areas.</li>
+<li>Customer wants one-time tracking without a monthly subscription — single purchase, no recurring cost.</li>
 </ul>
 <h3>When not to recommend it</h3>
 <ul>
 <li>Customer wants real-time GPS location — this isn't that. Recommend the Mobile-200 instead.</li>
 <li>Tracking in rural areas where there are unlikely to be iPhones nearby to relay the signal.</li>
 </ul>
-<div class="note warn"><b>Set this expectation clearly</b>Customers who expect GPS accuracy from a SmartLabel will always be disappointed. Make sure they understand it's Bluetooth-based and relies on Apple's Find My network before they buy — this is a top return reason for this product.</div>
+<div class="note warn"><b>Set this expectation clearly</b>Customers who expect GPS accuracy from a SmartLabel will always be disappointed. Make sure they understand it relies on Apple's Find My network before they buy — this is a top return reason for this product.</div>
+`,
+  },
+  {
+    id: 'carcharger',
+    name: 'Car Charger',
+    tagline: 'Legacy Vehicle Tracker',
+    badge: 'Discontinued',
+    badgeMod: 'warn',
+    img: '/support-training-center/car-charger.png',
+    power: '12V accessory port',
+    reporting: 'Every 400 m traveled',
+    battery: 'Runs on vehicle power',
+    audio: true,
+    detail: `
+<p class="lead">The Car Charger draws power from the 12V accessory port (cigarette lighter socket). It has been discontinued — we still support existing customers, but <b>never recommend it as a new purchase</b>.</p>
+<h3>Key details</h3>
+<ul>
+<li>Reports every 400 meters traveled — not on a fixed time interval. A parked vehicle won't ping until it moves.</li>
+<li>Only supports <b>one SOS number</b> (vs. two on the Mobile-200).</li>
+<li>Has the best audio quality of any model we make. Moot for new customers since it's discontinued.</li>
+</ul>
+<h3>Common support issue</h3>
+<ul>
+<li><b>"It stops reporting when I park."</b> Some vehicles only power the 12V port while the ignition is on. To test: plug a phone charger into the same port with the car off. If the phone doesn't charge, that's the cause — the port loses power when the ignition is off. The tracker is working correctly.</li>
+</ul>
+<h3>What not to do</h3>
+<ul>
+<li>Don't recommend the Car Charger to a customer shopping for a new device. Guide them to the Mobile-200 (which also supports audio) or the Protect Plus (no audio, longer battery).</li>
+</ul>
+<div class="note"><b>Red LED = getting power</b>A red LED means the Car Charger is receiving power from the port. If the customer reports no light and no updates, check whether the port is ignition-controlled first.</div>
 `,
   },
 ];
@@ -254,27 +293,38 @@ export default function LineupLesson() {
     <>
       <div className="prose">
         <p className="lead">Eight trackers. One dominates. The Mobile-200 accounts for about 88% of all device conversations — so start there. But knowing the full lineup means you&apos;ll catch the right fit for the other 12%, and you&apos;ll never send a customer down the wrong path.</p>
-        <p style={{ fontSize: 13.5, color: 'var(--ink-3)', margin: '0 0 20px' }}>Tap any device for support notes and common call patterns.</p>
+        <p style={{ fontSize: 13.5, color: 'var(--ink-3)', margin: '0 0 20px' }}>Tap any device to see support notes and common call patterns.</p>
       </div>
 
       <div className="dev-grid">
         {DEVICES.map(d => (
           <button key={d.id} className="dev-card" onClick={() => setOpenId(d.id)}>
-            <div className="dev-card-top">
-              <span className="dev-card-name">{d.name}</span>
-              {d.badge && <span className={`chip ${d.badgeMod ?? ''}`}>{d.badge}</span>}
-            </div>
-            <div className="dev-specs">
-              <div className="dev-spec"><span className="dev-spec-lbl">Power</span><span>{d.power}</span></div>
-              <div className="dev-spec"><span className="dev-spec-lbl">Reports</span><span>{d.reporting}</span></div>
-              <div className="dev-spec"><span className="dev-spec-lbl">Battery</span><span>{d.battery}</span></div>
-            </div>
-            <div className="dev-card-ft">
-              {d.audio
-                ? <span className="chip good">Audio ✓</span>
-                : <span className="chip bad">No audio</span>
+            <div className="dev-card-img">
+              {d.img
+                ? <img src={d.img} alt={d.name} loading="lazy" />
+                : <span className="dev-card-no-img">📡</span>
               }
-              <span className="dev-more">Details →</span>
+              {d.badge && (
+                <span className={`chip dev-card-badge ${d.badgeMod ?? ''}`}>{d.badge}</span>
+              )}
+            </div>
+            <div className="dev-card-body">
+              <div>
+                <div className="dev-card-name">{d.name}</div>
+                <div className="dev-card-tagline">{d.tagline}</div>
+              </div>
+              <div className="dev-specs">
+                <div className="dev-spec"><span className="dev-spec-lbl">Power</span><span>{d.power}</span></div>
+                <div className="dev-spec"><span className="dev-spec-lbl">Reports</span><span>{d.reporting}</span></div>
+                <div className="dev-spec"><span className="dev-spec-lbl">Battery</span><span>{d.battery}</span></div>
+              </div>
+              <div className="dev-card-ft">
+                {d.audio
+                  ? <span className="chip good">Audio ✓</span>
+                  : <span className="chip bad">No audio</span>
+                }
+                <span className="dev-more">Details →</span>
+              </div>
             </div>
           </button>
         ))}
@@ -317,7 +367,7 @@ export default function LineupLesson() {
             <tr>
               <td>Tracking a shipment, package, or envelope</td>
               <td><strong>SmartLabel</strong></td>
-              <td>No subscription — one-time purchase. Uses Bluetooth, not GPS. Accuracy depends on other app users being nearby.</td>
+              <td>No subscription — one-time purchase. Uses Bluetooth via Apple&apos;s Find My network, not GPS.</td>
             </tr>
             <tr>
               <td>A fleet of 10+ trackers</td>
@@ -354,6 +404,11 @@ export default function LineupLesson() {
               <button className="dev-modal-close" onClick={() => setOpenId(null)} aria-label="Close">✕</button>
             </div>
             <div className="dev-modal-body">
+              {device.img && (
+                <div className="dev-modal-img">
+                  <img src={device.img} alt={device.name} />
+                </div>
+              )}
               <div className="prose" dangerouslySetInnerHTML={{ __html: device.detail }} />
             </div>
           </div>
