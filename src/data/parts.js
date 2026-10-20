@@ -281,52 +281,16 @@ export const PARTS = [
   blurb:"Each tracker we support, how live audio works, how our devices connect, and what our plans cost.",
   quizTitle:"Product Knowledge Quiz",
   lessons:[
-  { n:13, id:"l13", title:"The lineup at a glance", mins:6, body:`
-<div class="tbl"><table><tr><th>Model</th><th>Power</th><th>Default reporting</th><th>Battery</th><th>Live audio</th></tr>
-<tr><td><b>Mobile-200 (200G)</b><br><span class="muted small">Flagship. About 88% of device conversations are about this model.</span></td><td>Rechargeable, magnetic mount, IP67</td><td>Every 30 s while moving, hourly while parked</td><td>About 7–10 days</td><td><span class="chip good">Yes</span></td></tr>
-<tr><td><b>Car Charger</b><br><span class="muted small">Discontinued, still supported</span></td><td>12V accessory port</td><td>Every 400 m</td><td>Runs on vehicle power</td><td><span class="chip good">Yes</span> (1 SOS number only)</td></tr>
-<tr><td><b>Protect Plus</b></td><td>Rechargeable</td><td>30 s moving, 1 h parked</td><td>About 2 weeks</td><td><span class="chip bad">No</span></td></tr>
-<tr><td><b>Road-Wired</b></td><td>Hardwired to 12V</td><td>30 s moving, 1 h parked</td><td>Backup battery lasts under 24 h</td><td><span class="chip bad">No</span></td></tr>
-<tr><td><b>Pocket Tracker / Micro-431</b></td><td>USB-C</td><td>Every 400 m</td><td>Up to about 10 days</td><td><span class="chip bad">No</span></td></tr>
-<tr><td><b>AssetTrack Mini</b></td><td>Long-life battery</td><td>Every 24 h</td><td>About 5 years</td><td><span class="chip bad">No</span></td></tr>
-<tr><td><b>Asset 432 / 422</b></td><td>Battery</td><td>1–4 times a day</td><td>Long life</td><td><span class="chip bad">No</span></td></tr>
-<tr><td><b>SmartLabel</b></td><td>Disposable Bluetooth label</td><td>Broadcasts every 2 min</td><td>Up to about 2 months</td><td><span class="chip bad">No</span></td></tr>
-</table></div>
-<h3>Which tracker to recommend</h3>
-<div class="tbl"><table><tr><th>The customer needs…</th><th>Recommend</th></tr>
-<tr><td>Real-time tracking plus the ability to listen in</td><td>Mobile-200. Be upfront that audio costs $6/hour and only works while the tracker is moving.</td></tr>
-<tr><td>Real-time tracking, no audio, longer battery life</td><td>Protect Plus</td></tr>
-<tr><td>A permanent install in a vehicle</td><td>Road-Wired (a mechanic install is recommended)</td></tr>
-<tr><td>Tracking equipment or trailers that sit for months</td><td>AssetTrack Mini or Asset 432</td></tr>
-<tr><td>Tracking shipments or envelopes</td><td>SmartLabel (no subscription)</td></tr>
-<tr><td>A fleet of 5+ trackers</td><td>Collect the company name, quantity and use case, then route them to GPX sales</td></tr>
-</table></div>`},
-  { n:14, id:"l14", title:"Mobile-200 deep dive", mins:5, body:`
-<h3>Lights</h3>
+  { n:13, id:"l13", title:"The lineup at a glance", mins:6, type:'lineup' },
+  { n:14, id:"l14", title:"Mobile-200 deep dive", mins:3, body:`
+<h3>Hardware notes</h3>
 <ul>
-<li><b>Solid red:</b> charging. <b>Slow-blinking red:</b> full.</li>
-<li><b>Green blinking about every 3 seconds:</b> connected and normal. <b>Rapid green:</b> the SIM may need reseating.</li>
-</ul>
-<h3>Power &amp; charging</h3>
-<ul>
-<li><b>The power button can't turn the tracker off.</b> That's intentional. To check whether it's on, have the customer press the button: if all the lights flash briefly, it's on.</li>
-<li>Charge from a wall outlet with the included adapter. A laptop USB port may not supply enough power. A full charge takes 4–5 hours. On a completely drained unit, the red light can take up to 30 minutes to appear.</li>
-<li>Battery drains faster indoors, in weak coverage, and when live audio is used.</li>
-</ul>
-<h3>Hardware</h3>
-<ul>
-<li>The microphone is at the charging-port end and picks up sound within a few feet.</li>
-<li><b>SIM reseat:</b> remove the magnetic plate and the 6 screws (#0 Phillips), slide the SIM out and back in, then test before closing the case.</li>
+<li>The microphone is at the <b>charging-port end</b> and picks up sound within a few feet. For the best audio, confirm the tracker is inside the cabin — not in a trunk or under the seat.</li>
 </ul>
 <h3>Setup</h3>
 <p>Onboarding checklist: download the app, set up the profile, explore the tabs, create geofences, and set the SOS number for audio. Setup takes about 30 minutes, and we can offer a walkthrough call.</p>`},
-  { n:15, id:"l15", title:"Live audio — how it works", mins:7, body:`
-<ul>
-<li>The customer calls the tracker's phone number and <b>listens live</b>. Nothing is recorded, and there are no alerts triggered by sound.</li>
-<li><b>Supported on:</b> Mobile-200 and the legacy Car Charger only.</li>
-<li><b>US networks only</b>, in the contiguous US. A tracker abroad still reports its location, but audio can't connect.</li>
-<li><b>The tracker must be moving.</b> A parked tracker sleeps, and callers hear voicemail or "customer not available."</li>
-</ul>
+  { n:15, id:"l15", title:"Live audio — how it works", mins:5, body:`
+<p>The customer calls the tracker's phone number and listens live. <b>Nothing is recorded</b>, and there are no alerts triggered by sound — it's passive listening only.</p>
 <h3>Minutes</h3>
 <div class="tbl"><table><tr><th>Fact</th><th>Details</th></tr>
 <tr><td>Price</td><td><b>$6 per hour</b>, sold in 60-minute units. Not included in the subscription.</td></tr>
@@ -344,9 +308,8 @@ export const PARTS = [
 <li>Call the tracker's number (shown in the Info tab) <b>from that same phone</b>. If caller ID is blocked, dial *82 first.</li>
 </ol>
 <div class="note warn"><b>Set expectations early</b>Two things customers often don't know when they buy: audio minutes cost extra, and audio only works while the tracker is moving. Both are among our top reasons for returns.</div>`},
-  { n:16, id:"l16", title:"Car Charger, Protect Plus, Road-Wired & Pocket", mins:5, body:`
+  { n:16, id:"l16", title:"Protect Plus, Road-Wired & Pocket Tracker", mins:4, body:`
 <ul>
-<li><b>Car Charger:</b> a red LED means it's getting power. Some vehicles only power the accessory port while the ignition is on. To test the port, plug a phone into the tracker's USB port. It has the best audio of our models.</li>
 <li><b>Protect Plus:</b> press the top button to see the blue LEDs. The power switch and SIM are under the front plate and a gasket. Anti-tamper alerts (removal, cover open, installation, vibration) can drain the battery. After 5 minutes stationary it hibernates.</li>
 <li><b>Road-Wired:</b> a red LED means it has power. Wiring: <b>red</b> to 12V constant, <b>black</b> to ground, <b>orange</b> to ignition (optional). Use the PWR connector. Don't install it under the hood or in the trunk.</li>
 <li><b>Pocket Tracker / Micro-431:</b> charges over USB-C. Hold SOS until it vibrates to confirm power and force a report. Battery life depends on the reporting interval: about 10 days at the default, 14–17 days at 15 minutes, and about a month at hourly.</li>
@@ -360,7 +323,6 @@ export const PARTS = [
   { n:17, id:"l17", title:"Asset trackers & SmartLabel", mins:4, body:`
 <h3>Asset 432/422 &amp; AssetTrack Mini</h3>
 <ul>
-<li>These report 1–4 times a day and <b>can't be woken on demand</b>. Commands and geofence alerts only go through at the next check-in. If a customer needs real-time tracking, recommend the Mobile-200 or Protect Plus.</li>
 <li><b>AssetTrack Mini:</b> magnetic side toward the asset, antenna side up. Battery life is about 5 years at 24-hour reporting and about 6 months at hourly. If it only shows Wi-Fi or cell locations, move it somewhere with a better sky view.</li>
 <li>Asset 432 replacement batteries aren't sold on the website. Order them manually, and charge the card on file only with the customer's OK.</li>
 </ul>
