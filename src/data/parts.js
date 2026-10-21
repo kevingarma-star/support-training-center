@@ -509,34 +509,101 @@ export const PARTS = [
 <tr><td><code>SOS#</code> / <code>MONPERMIT#</code></td><td>Audio checks: the SOS number matches the caller, and MONPERMIT is 1 (only the SOS number can call). If MONPERMIT is 0, send <code>MONPERMIT,1#</code>.</td></tr>
 </table></div>
 <p class="small muted">The Loom walkthroughs for each command are in the Resource Library.</p>`},
-  { n:29, id:"l29", title:"Mobile-200", mins:7, body:`
-<h3>Not reporting. First ask: has it ever reported?</h3>
+  { n:29, id:"l29", title:"Mobile-200 (200G)", mins:10, body:`
+<p class="lead">The Mobile-200 is behind about <b>88% of all support conversations</b>. Know this device inside out.</p>
+
+<h3>At a glance</h3>
+<div class="tbl"><table><tr><th>Spec</th><th>Detail</th></tr>
+<tr><td>Form factor</td><td>Portable, rechargeable, magnetic mount</td></tr>
+<tr><td>Common use</td><td>Vehicles, bags, backpacks — anything that moves</td></tr>
+<tr><td>Live audio</td><td>Our only consumer device that supports it. Add-on, not included in the subscription.</td></tr>
+<tr><td>SIM type</td><td>AT&amp;T 4G LTE. Earlier Gen 1 and Gen 2 units used T-Mobile 2G — those are obsolete and won't report.</td></tr>
+<tr><td>Network reset</td><td>Agents only. Takes 30–45 minutes. Never tell the customer they can do it themselves.</td></tr>
+</table></div>
+
+<h3>Reading the LEDs</h3>
+<div class="tbl"><table><tr><th>Light</th><th>What it means</th></tr>
+<tr><td>Solid red</td><td>Charging</td></tr>
+<tr><td>Slow-blinking red</td><td>Fully charged</td></tr>
+<tr><td>Green blink every ~3 seconds</td><td>Connected, working normally</td></tr>
+<tr><td>Rapid green blink</td><td>SIM may need reseating — see below</td></tr>
+<tr><td>All lights flash briefly on button press</td><td>Device is on</td></tr>
+<tr><td>No response to button press</td><td>Off or dead battery — charge it first</td></tr>
+</table></div>
+<div class="note"><b>The power button can't turn the tracker off.</b> That's by design. To confirm it's on, press the button. If all the lights flash briefly, it's on.</div>
+
+<h3>Power &amp; charging</h3>
 <ul>
-<li><b>Yes, and it's in a data session:</b> check placement (take it outdoors) → check coverage → <code>WHERE#</code>, <code>CHECK#</code>, <code>STATUS#</code> → <code>RESET#</code> and wait 10 minutes → have the customer take a short drive, pressing SOS a few times → escalate.</li>
-<li><b>Yes, but no data session:</b> confirm it's charged (all lights flash on a button press) → check coverage and placement → confirm the SIM is active → reset → short drive → escalate.</li>
-<li><b>Never reported:</b> confirm the IMEI matches → check placement, charge, SIM and coverage → <code>RESET#</code> → escalate.</li>
-<li><b>Stuck for 24+ hours:</b> check the green blink rate → reseat the SIM → escalate.</li>
+<li><b>Use a wall outlet</b> with the included adapter. A laptop USB port may not deliver enough current.</li>
+<li><b>Charge time:</b> 4–5 hours for a full charge. On a completely drained unit, the red charging light can take up to 30 minutes to appear — don't assume the device is dead.</li>
+<li><b>Battery drains faster</b> indoors, in weak signal areas, and during live audio use.</li>
+<li><b>The magnetic charger can latch without making electrical contact.</b> Solid red is the only confirmation it's actually charging. If the customer doesn't see it, have them reseat the cable.</li>
 </ul>
+
+<h3>Placement</h3>
+<p>Placement is the single most common root cause of tracking failures. Always ask where the tracker is before sending commands.</p>
+<div class="tbl"><table><tr><th>Avoid</th><th>Prefer</th></tr>
+<tr><td>Metal surfaces, trunks, engine bays, glove boxes</td><td>Dashboard, under a seat, on an interior roof panel</td></tr>
+<tr><td>Underground parking or enclosed garages</td><td>Outdoors or near a window</td></tr>
+<tr><td>Deep inside a bag or pack</td><td>An exterior pocket or clipped to the outside</td></tr>
+</table></div>
+<div class="note warn"><b>Live audio placement rule:</b> the tracker must be inside the cabin. Mounting it under the vehicle works for GPS but not for audio.</div>
+
+<h3>Live audio — quick reference</h3>
+<div class="tbl"><table><tr><th>Fact</th><th>Detail</th></tr>
+<tr><td>Cost</td><td><b>$6 per hour</b>, sold in 60-minute blocks. Not included in the subscription.</td></tr>
+<tr><td>Motion required</td><td>The tracker must be <b>moving</b>. A parked tracker sleeps — callers hear voicemail or "customer not available."</td></tr>
+<tr><td>Geography</td><td>Contiguous US only. Location still works abroad, but audio won't connect.</td></tr>
+<tr><td>SOS number</td><td>Must be the customer's own phone number. Calling from any other number fails.</td></tr>
+<tr><td>Caller ID</td><td>If the customer has caller ID blocking on, they need to dial *82 before calling.</td></tr>
+</table></div>
+<div class="note warn"><b>Set expectations before they buy.</b> Customers consistently don't know two things: audio costs extra, and it only works while moving. Both are top reasons for returns.</div>
+
+<h3>Not reporting — start with this question: has it ever reported?</h3>
+<ul>
+<li><b>Yes, and there's a data session:</b> check placement (outdoors, not in metal or a garage) → check coverage → send <code>WHERE#</code>, <code>CHECK#</code>, <code>STATUS#</code> → <code>RESET#</code> and wait 10 minutes → short drive with a few SOS presses → escalate.</li>
+<li><b>Yes, but no data session:</b> confirm it's charged (button press → all lights flash) → check coverage and placement → confirm the SIM is active in the portal → <code>RESET#</code> → short drive → escalate.</li>
+<li><b>Never reported:</b> confirm the IMEI in Admin matches the one on the device → check placement, charge, SIM status, and coverage → <code>RESET#</code> → escalate.</li>
+<li><b>Stuck for 24+ hours:</b> check the green blink rate (rapid = SIM issue) → reseat the SIM → escalate.</li>
+</ul>
+
+<h3>Rapid green blink → SIM reseat</h3>
+<ol class="steps">
+<li>Open the case: #0 Phillips screwdriver, 6 screws.</li>
+<li>Slide the SIM card out, then firmly back in until it clicks.</li>
+<li>Power on and confirm the blink rate returns to slow (~3 seconds) before closing the case.</li>
+</ol>
+
+<h3>Tracker appears offline in Admin</h3>
+<p>Before escalating to hardware, confirm the SIM. Click the red link under the ICCID (labeled Twilio, KORE, or AT&amp;T). Confirm the SIM is <b>active</b> and shows recent data sessions. No data sessions ever = provisioning issue, not a hardware failure.</p>
+
 <h3>Won't charge</h3>
 <ol class="steps">
-<li>Confirm there's no red light while charging.</li>
-<li>Clean the port with a cloth dampened with alcohol.</li>
-<li>Try another wall outlet, then another adapter and cable.</li>
-<li>Ask for photos of the port and a video of the LEDs.</li>
+<li>Confirm no solid red light appears while plugged in.</li>
+<li>Clean the charging port with a cloth lightly dampened with isopropyl alcohol.</li>
+<li>Try a different wall outlet, then a different adapter and cable.</li>
+<li>Ask the customer for photos of the port and a short video of the LEDs while plugging in.</li>
 <li>Escalate.</li>
 </ol>
-<h3>"It shows 0% even though I charged it"</h3>
-<p>The battery percentage only updates when the tracker reports. Confirm three things: they saw <b>solid red</b> while charging (the magnetic charger can latch without making contact), they turned it on <b>after</b> unplugging it, and it has had time outside to report.</p>
+
+<h3>"It shows 0% even after charging"</h3>
+<p>The battery percentage only updates when the tracker reports. Confirm three things:</p>
+<ul>
+<li>They saw <b>solid red</b> while charging — the magnetic charger can latch without making contact.</li>
+<li>They turned the tracker on <b>after</b> unplugging it.</li>
+<li>It has had time outdoors to send a new ping and update the reading.</li>
+</ul>
+
 <h3>Audio calls won't connect</h3>
 <ol class="steps">
-<li>Check the customer's side: minutes left, the SOS number is their phone, they're calling from that phone, the tracker is online, the tracker is <b>moving</b>, caller ID isn't blocked, and they're in the US.</li>
-<li>Check the voice coverage layer and <code>SOS#</code> / <code>MONPERMIT#</code>.</li>
-<li>If calls are blocked (for example, after the minutes ran out), reset the SIM and wait about 30 minutes. On AT&amp;T SIMs, confirm the comm plan includes VoLTE.</li>
+<li>Check the customer's side: minutes remaining, SOS number is their own phone, calling from that number, tracker is online, tracker is <b>moving</b>, caller ID isn't blocked, and they're in the contiguous US.</li>
+<li>Send <code>SOS#</code> and <code>MONPERMIT#</code>. If MONPERMIT returns 0, send <code>MONPERMIT,1#</code> to enable it.</li>
+<li>Check the voice coverage layer on the FCC map (T-Mobile LTE Voice or AT&amp;T voice). If calls are blocked after running out of minutes, reset the SIM and wait ~30 minutes. On AT&amp;T SIMs, confirm the comm plan includes VoLTE.</li>
 <li>Send <code>RESET#</code>.</li>
-<li>If it still fails, refresh the phone number and tell the customer the new number is in the Info tab.</li>
-<li>Escalate.</li>
+<li>If still failing, refresh the phone number — the new number appears in the Info tab. Tell the customer to use that number going forward.</li>
+<li>Escalate with everything you've tried.</li>
 </ol>
-<p><b>Call connects but there's no sound?</b> Have someone speak right at the mic, which is at the charging-port end. If it's still silent, escalate.</p>`},
+<p><b>Call connects but there's no sound?</b> Ask the caller to speak directly at the mic — it's at the charging-port end of the device. If it's still silent after that, escalate.</p>`},
   { n:30, id:"l30", title:"Protect Plus & Road-Wired", mins:4, body:`
 <h3>Protect Plus</h3>
 <ol class="steps">
