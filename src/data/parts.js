@@ -301,15 +301,6 @@ export const PARTS = [
 <li>Call the tracker's number (shown in the Info tab) <b>from that same phone</b>. If caller ID is blocked, dial *82 first.</li>
 </ol>
 <div class="note warn"><b>Set expectations early</b>Two things customers often don't know when they buy: audio minutes cost extra, and audio only works while the tracker is moving. Both are among our top reasons for returns.</div>`},
-  { n:18, id:"l18", title:"Networks, SIMs & the 2G sunset", mins:4, body:`
-<ul>
-<li><b>SIMs are locked to their device.</b> Never swap SIMs between trackers.</li>
-<li>Check the SIM type in Admin: Twilio or Super SIM (usually T-Mobile), AT&amp;T, or KORE (AssetTrack Mini, which works on both AT&amp;T and T-Mobile).</li>
-<li><b>2G is gone.</b> T-Mobile has finished shutting down its 2G network, so 2G-only trackers no longer report anywhere in the US. Examples: Auto-270, Auto-325, Asset Tracker 4, Micro-299, Mobile-200 Gen 1, Mobile-200i Gen 2, Qbit, the old USB Car Charger, Wired-300.
-<ul><li>A SIM swap won't revive them, and we don't accept returns on obsolete devices.</li><li>Offer a 4G upgrade with <code>TRACKMORE2026</code> (20% off).</li></ul></li>
-<li><b>SIMs canceled for inactivity:</b> some older SIMs were permanently canceled because carriers recycle numbers.
-<ul><li>If a customer reactivates one of these trackers, cancel the new subscription, refund it, and offer 20% off a new tracker.</li><li>Current AT&amp;T SIMs stay reusable no matter how long they've been inactive.</li></ul></li>
-</ul>`},
   { n:19, id:"l19", title:"Subscription plans & pricing", mins:4, body:`
 <div class="tbl"><table><tr><th>Plan</th><th>Price</th><th>Notes</th></tr>
 <tr><td><b>Monthly</b></td><td><b>$19.99/month</b></td><td>Auto-renews every month</td></tr>
@@ -332,7 +323,6 @@ export const PARTS = [
   {q:"What should the SOS number be?", o:["The tracker's number","The customer's own cell phone","Our support line","Any landline"], a:1, why:"The call has to come from the SOS number."},
   {q:"What are the current standard plan prices?", o:["$24.95/mo or $179.40/yr","$19.99/mo or $149.99/yr","$14.95/mo","$9.99/mo"], a:1, why:"Monthly $19.99 or annual $149.99."},
   {q:"A customer on the legacy $14.95 plan had their card fail and the subscription canceled. What rate do they get when they reactivate?", o:["$14.95","Current rates, because the grandfathered rate is lost on any cancellation","Free","Their choice"], a:1, why:"Legacy pricing is lost whenever the subscription cancels."},
-  {q:"A customer wants to move the SIM from an old 2G tracker into a new one. What do you tell them?", o:["Go ahead","SIMs are locked to their device and 2G is gone; recommend a 4G upgrade with TRACKMORE2026","Send a free SIM","Escalate"], a:1, why:"SIMs are device-locked and 2G trackers can't be revived."},
   {q:"A GPX account that moved to Logistimatics wants its legacy $6/mo dealer rate on a new order. What do you tell them?", o:["Honor it forever","It only applied to the transition purchase; standard rates apply now","Give 50% off","Send a manual invoice"], a:1, why:"Legacy dealer rates apply only to the transition purchase."},
   {q:"A customer traveling in Canada says tracking works but audio fails. Why?", o:["Reset the SIM","Audio only works on US networks","Buy minutes","Replace the device"], a:1, why:"Location works while roaming abroad, but audio doesn't."}
   ]
