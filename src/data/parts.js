@@ -313,7 +313,6 @@ export const PARTS = [
 <li>Each tracker has its own subscription, tied to its <b>serial number</b>.</li>
 <li>Billing is automatic from the card on file (debit or credit only). Tax varies by state. Monthly plans can't be prepaid.</li>
 <li>Some existing renewals still show older prices, such as $24.95 or $179.40. <b>Check the customer's actual plan in Admin</b> before quoting a price.</li>
-<li><b>GPX business accounts moved to Logistimatics:</b> a legacy dealer rate (for example $6/mo) applies only to the transition purchase. After that, standard rates apply. Billing is always automatic, with no manual invoices, even for B2B.</li>
 </ul>`}
   ],
   quiz:[
@@ -323,7 +322,6 @@ export const PARTS = [
   {q:"What should the SOS number be?", o:["The tracker's number","The customer's own cell phone","Our support line","Any landline"], a:1, why:"The call has to come from the SOS number."},
   {q:"What are the current standard plan prices?", o:["$24.95/mo or $179.40/yr","$19.99/mo or $149.99/yr","$14.95/mo","$9.99/mo"], a:1, why:"Monthly $19.99 or annual $149.99."},
   {q:"A customer on the legacy $14.95 plan had their card fail and the subscription canceled. What rate do they get when they reactivate?", o:["$14.95","Current rates, because the grandfathered rate is lost on any cancellation","Free","Their choice"], a:1, why:"Legacy pricing is lost whenever the subscription cancels."},
-  {q:"A GPX account that moved to Logistimatics wants its legacy $6/mo dealer rate on a new order. What do you tell them?", o:["Honor it forever","It only applied to the transition purchase; standard rates apply now","Give 50% off","Send a manual invoice"], a:1, why:"Legacy dealer rates apply only to the transition purchase."},
   {q:"A customer traveling in Canada says tracking works but audio fails. Why?", o:["Reset the SIM","Audio only works on US networks","Buy minutes","Replace the device"], a:1, why:"Location works while roaming abroad, but audio doesn't."}
   ]
 },
