@@ -301,20 +301,6 @@ export const PARTS = [
 <li>Call the tracker's number (shown in the Info tab) <b>from that same phone</b>. If caller ID is blocked, dial *82 first.</li>
 </ol>
 <div class="note warn"><b>Set expectations early</b>Two things customers often don't know when they buy: audio minutes cost extra, and audio only works while the tracker is moving. Both are among our top reasons for returns.</div>`},
-  { n:17, id:"l17", title:"Asset trackers & SmartLabel", mins:4, body:`
-<h3>Asset 432/422 &amp; AssetTrack Mini</h3>
-<ul>
-<li><b>AssetTrack Mini:</b> magnetic side toward the asset, antenna side up. Battery life is about 5 years at 24-hour reporting and about 6 months at hourly. If it only shows Wi-Fi or cell locations, move it somewhere with a better sky view.</li>
-<li>Asset 432 replacement batteries aren't sold on the website. Order them manually, and charge the card on file only with the customer's OK.</li>
-</ul>
-<h3>SmartLabel</h3>
-<ul>
-<li>Serials start with <code>SL</code>. SmartLabels use Apple's <b>Find My</b> Bluetooth network, not cellular, so updates depend on iPhones passing nearby.</li>
-<li><b>No subscription:</b> checkout shows $0. Customers can activate them themselves.</li>
-<li>The label is inactive until its tab is cut. The first location appears 15–30 minutes after cutting, if iPhones are nearby.</li>
-<li>Battery lasts up to about 2 months. Labels are splash-resistant only.</li>
-<li>Gaps are normal in transit: expect hours or days on rail, and updates mostly at ports and airports for ocean and air shipments.</li>
-</ul>`},
   { n:18, id:"l18", title:"Networks, SIMs & the 2G sunset", mins:4, body:`
 <ul>
 <li><b>SIMs are locked to their device.</b> Never swap SIMs between trackers.</li>
@@ -344,8 +330,6 @@ export const PARTS = [
   {q:"A customer made 12 calls of about 10 seconds each. How many minutes did they use?", o:["2","12","0","1"], a:1, why:"Every call rounds up to a full minute."},
   {q:"A customer's tracker is parked in the driveway and calls go to \"customer not available.\" Why?", o:["Wrong SOS number","The tracker is asleep; audio needs it to be moving","No minutes","Caller ID"], a:1, why:"A parked tracker sleeps, so audio won't connect."},
   {q:"What should the SOS number be?", o:["The tracker's number","The customer's own cell phone","Our support line","Any landline"], a:1, why:"The call has to come from the SOS number."},
-  {q:"What does a SmartLabel subscription cost?", o:["$19.99/mo","$149.99/yr","Nothing; there's no subscription","$6/hr"], a:2, why:"SmartLabels have no subscription."},
-  {q:"An Asset 432 owner sent a command an hour ago and nothing has happened. Why?", o:["It's broken","It can't be woken; the command goes through at its next check-in","Send the command 3 times","The SIM is canceled"], a:1, why:"Asset trackers report 1–4 times a day."},
   {q:"What are the current standard plan prices?", o:["$24.95/mo or $179.40/yr","$19.99/mo or $149.99/yr","$14.95/mo","$9.99/mo"], a:1, why:"Monthly $19.99 or annual $149.99."},
   {q:"A customer on the legacy $14.95 plan had their card fail and the subscription canceled. What rate do they get when they reactivate?", o:["$14.95","Current rates, because the grandfathered rate is lost on any cancellation","Free","Their choice"], a:1, why:"Legacy pricing is lost whenever the subscription cancels."},
   {q:"A customer wants to move the SIM from an old 2G tracker into a new one. What do you tell them?", o:["Go ahead","SIMs are locked to their device and 2G is gone; recommend a 4G upgrade with TRACKMORE2026","Send a free SIM","Escalate"], a:1, why:"SIMs are device-locked and 2G trackers can't be revived."},
