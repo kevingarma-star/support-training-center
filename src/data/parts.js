@@ -301,18 +301,6 @@ export const PARTS = [
 <li>Call the tracker's number (shown in the Info tab) <b>from that same phone</b>. If caller ID is blocked, dial *82 first.</li>
 </ol>
 <div class="note warn"><b>Set expectations early</b>Two things customers often don't know when they buy: audio minutes cost extra, and audio only works while the tracker is moving. Both are among our top reasons for returns.</div>`},
-  { n:16, id:"l16", title:"Protect Plus, Road-Wired & Pocket Tracker", mins:4, body:`
-<ul>
-<li><b>Protect Plus:</b> press the top button to see the blue LEDs. The power switch and SIM are under the front plate and a gasket. Anti-tamper alerts (removal, cover open, installation, vibration) can drain the battery. After 5 minutes stationary it hibernates.</li>
-<li><b>Road-Wired:</b> a red LED means it has power. Wiring: <b>red</b> to 12V constant, <b>black</b> to ground, <b>orange</b> to ignition (optional). Use the PWR connector. Don't install it under the hood or in the trunk.</li>
-<li><b>Pocket Tracker / Micro-431:</b> charges over USB-C. Hold SOS until it vibrates to confirm power and force a report. Battery life depends on the reporting interval: about 10 days at the default, 14–17 days at 15 minutes, and about a month at hourly.</li>
-</ul>
-<h3>Placement: the #1 cause of tracking problems</h3>
-<ul>
-<li>The tracker needs a clear view of the sky. Avoid metal, trunks, glove boxes, engine bays and garages.</li>
-<li>Under a vehicle, place it near the edge of the frame. Indoors, place it near a window.</li>
-<li>For audio, the tracker must be inside the cabin.</li>
-</ul>`},
   { n:17, id:"l17", title:"Asset trackers & SmartLabel", mins:4, body:`
 <h3>Asset 432/422 &amp; AssetTrack Mini</h3>
 <ul>
@@ -352,7 +340,6 @@ export const PARTS = [
 </ul>`}
   ],
   quiz:[
-  {q:"A customer with a Protect Plus says live audio won't connect. What's the issue?", o:["Wrong SOS number","Protect Plus doesn't support live audio","Out of minutes","The SIM needs a reset"], a:1, why:"Only the Mobile-200 (and the legacy Car Charger) support audio."},
   {q:"A Mobile-200's green light is blinking rapidly. What does that suggest?", o:["Fully charged","Normal","The SIM may need reseating","GPS lock"], a:2, why:"A slow blink every 3 seconds is normal. A rapid blink points to the SIM."},
   {q:"A customer made 12 calls of about 10 seconds each. How many minutes did they use?", o:["2","12","0","1"], a:1, why:"Every call rounds up to a full minute."},
   {q:"A customer's tracker is parked in the driveway and calls go to \"customer not available.\" Why?", o:["Wrong SOS number","The tracker is asleep; audio needs it to be moving","No minutes","Caller ID"], a:1, why:"A parked tracker sleeps, so audio won't connect."},
