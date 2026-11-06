@@ -331,14 +331,35 @@ export const PARTS = [
   quizTitle:"Policy check",
   lessons:[
   { n:20, id:"l20", title:"Return & refund policy", mins:5, body:`
+<p>By the end of this lesson, you'll be able to explain our return window and requirements, set up an approved return, and give customers a clear refund timeline.</p>
+
+<h3>The basics</h3>
 <ul>
-<li>Returns are accepted <b>within 30 days of delivery</b>. The device must be undamaged and come back in its <b>original box</b> with all accessories. Returns without the original packaging may get a 10% restocking fee.</li>
-<li>Returns must be <b>approved by an agent</b>. We email a prepaid USPS label, and the customer ships within 2 weeks or the label expires.</li>
-<li><b>No returns on obsolete or discontinued devices</b>, such as 2G trackers.</li>
-<li>Shipping costs aren't refundable. Subscription fees aren't refundable or prorated under the written policy, but exceptions are made case by case (see lesson 25).</li>
-<li><b>Refund timing:</b> 5–10 business days after we process it. Give the customer a date to expect it by.</li>
-<li><b>Returning a device doesn't cancel its subscription.</b></li>
-</ul>`},
+<li><b>Return window.</b> Returns are accepted within 30 days of delivery.</li>
+<li><b>Condition.</b> The device must be undamaged and come back in its original box with all accessories. A return without the original packaging may get a 10% restocking fee.</li>
+<li><b>Approval.</b> Every return must be approved by an agent first. Customers should never ship a device back before they have a label from us.</li>
+<li><b>Not returnable.</b> Obsolete or discontinued devices, such as 2G trackers, can't be returned.</li>
+</ul>
+
+<h3>How a return works</h3>
+<ol>
+<li><b>Review the request.</b> Confirm the order, the delivery date, and the device's condition.</li>
+<li><b>Approve it.</b> If the return qualifies, approve it in the system.</li>
+<li><b>Send the label.</b> We email a prepaid USPS label.</li>
+<li><b>Customer ships within 2 weeks.</b> After that, the label expires and you'll need to issue a new one.</li>
+<li><b>Process the refund</b> once the device arrives and checks out.</li>
+</ol>
+
+<h3>What is and isn't refundable</h3>
+<div class="tbl"><table><tr><th>Item</th><th>Refundable?</th></tr>
+<tr><td>Device (qualifying return)</td><td>Yes</td></tr>
+<tr><td>Shipping costs</td><td>No</td></tr>
+<tr><td>Subscription fees</td><td>Not under the written policy. Not prorated either.</td></tr>
+</table></div>
+<p><b>Subscription exceptions.</b> The written policy doesn't refund or prorate subscription fees, but you can make exceptions case by case. Use your judgment based on the situation, and document why you made the exception.</p>
+
+<h3>Refund timing</h3>
+<p>Refunds take 5–10 business days after we process them. Always give the customer a specific date to expect it by, not just "5–10 days." Counting forward from the day you process it shows them you're on top of it.</p>`},
   { n:21, id:"l21", title:"Subscription cancellation process", mins:4, body:`
 <ul>
 <li><b>Self-serve:</b> <code>app.logistimatics.com/manage/subscriptions</code> → select the subscription → Cancel. Agents can also cancel on the backend.</li>
