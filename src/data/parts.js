@@ -472,7 +472,54 @@ export const PARTS = [
 <ol>
 <li><b>Confirm the request.</b> Make sure it's clear they want the account and data deleted rather than canceling their subscription.</li>
 <li><b>Forward the request promptly.</b></li>
-</ol>`},
+</ol>
+<h3>Here's our account deletion workflow</h3>
+<ol>
+<li><b>Ticket request comes in</b></li>
+<li><b>Send confirmation email</b> — use the Acct Deletion vs. Cancellation macro to clarify what the customer wants</li>
+<li><b>Customer responds:</b>
+  <ul>
+    <li><i>Subscription cancellation</i> → follow the cancellation workflow</li>
+    <li><i>Account deletion</i> → forward the initial request to <code>legal@logistimatics.com</code>, close the forwarded ticket, send the 'Request Forwarded' macro to the customer, then close the ticket</li>
+  </ul>
+</li>
+</ol>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 490" style="width:100%;max-width:480px;display:block;margin:1.5rem auto">
+  <defs>
+    <marker id="arr-ad" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="180" y="10" width="200" height="40" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="280" y="34" text-anchor="middle" font-size="13" fill="#1e40af" font-weight="600">Ticket request comes in</text>
+  <line x1="280" y1="50" x2="280" y2="72" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="130" y="74" width="300" height="52" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="280" y="96" text-anchor="middle" font-size="13" fill="#1e40af" font-weight="600">Send confirmation email</text>
+  <text x="280" y="114" text-anchor="middle" font-size="11" fill="#1e40af">(Acct Deletion vs. Cancellation macro)</text>
+  <line x1="280" y1="126" x2="280" y2="148" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <polygon points="280,150 400,172 280,194 160,172" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="280" y="176" text-anchor="middle" font-size="12" fill="#78350f">Customer's response?</text>
+  <text x="142" y="164" text-anchor="middle" font-size="10" fill="#555" font-style="italic">Cancellation</text>
+  <line x1="160" y1="172" x2="127" y2="172" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="5" y="152" width="120" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="65" y="169" text-anchor="middle" font-size="11" fill="#14532d">Follow cancellation</text>
+  <text x="65" y="183" text-anchor="middle" font-size="11" fill="#14532d">workflow</text>
+  <text x="288" y="204" font-size="10" fill="#555" font-style="italic">Account deletion</text>
+  <line x1="280" y1="194" x2="280" y2="216" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="130" y="218" width="300" height="52" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="240" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Forward request to</text>
+  <text x="280" y="257" text-anchor="middle" font-size="12" fill="#14532d">legal@logistimatics.com</text>
+  <line x1="280" y1="270" x2="280" y2="290" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="160" y="292" width="240" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="316" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Close forwarded ticket</text>
+  <line x1="280" y1="332" x2="280" y2="352" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="130" y="354" width="300" height="52" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="376" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Send 'Request Forwarded'</text>
+  <text x="280" y="393" text-anchor="middle" font-size="12" fill="#14532d">macro to customer</text>
+  <line x1="280" y1="406" x2="280" y2="426" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="160" y="428" width="240" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="452" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Close the ticket</text>
+</svg>`},
   { n:23, id:"l23", title:"Shipping policy & restrictions", mins:3, body:`
 <div class="tbl"><table><tr><th>Option</th><th>Price</th><th>Timing</th></tr>
 <tr><td>USPS</td><td>Free</td><td>About 3–7 days (East Coast) to 7–14 days (West Coast). PO boxes OK.</td></tr>
