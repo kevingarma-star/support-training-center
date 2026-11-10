@@ -369,14 +369,33 @@ export const PARTS = [
 <li><b>Save attempts:</b> make one warm attempt on routine cancellations. Never make one on data deletion requests, with customers who've clearly decided, or when misleading information was involved.</li>
 </ul>`},
   { n:22, id:"l22", title:"Account deletion policy", mins:3, body:`
+<div class="note"><b>What you'll learn</b>By the end of this lesson, you'll be able to recognize a deletion request, handle it promptly and neutrally, and confirm it's complete before closing the conversation.</div>
+<h3>The basics</h3>
 <ul>
-<li>Customers can ask us to delete their account and data.</li>
-<li>Deletion removes their name, email, phone number, geofences, commands and location history.</li>
-<li>Forward these requests <b>promptly</b>, with no attempt to keep the customer.</li>
-<li>If it's unclear whether they want the whole account deleted or just a subscription canceled, ask once, neutrally.</li>
-<li>Confirm the data is deleted in every system before you close the conversation.</li>
-<li>Deleting an account is permanent. Point customers to the Help Center's <i>Data Deletion Declaration</i>.</li>
-</ul>`},
+<li><b>Customers have the right to ask.</b> Any customer can ask us to delete their account and data.</li>
+<li><b>What deletion removes.</b> Deleting an account removes the customer's: name, email address, phone number, geofences, commands, and location history.</li>
+<li><b>It's permanent.</b> Deletion can't be undone. Devices on the account are permanently deactivated, so the customer can't get them back or reactivate them later.</li>
+</ul>
+<h3>Our approach: prompt, neutral, and respectful</h3>
+<p>When a customer asks for deletion, forward the request promptly. Do not try to keep the customer. That means:</p>
+<ul>
+<li>No retention offers, discounts, or "are you sure?" pitches.</li>
+<li>No asking why they're leaving before acting.</li>
+<li>No delays while you try to fix a problem they didn't ask you to fix.</li>
+</ul>
+<p>Their data belongs to them, and a fast, respectful response is the right one.</p>
+<h3>When the request is unclear</h3>
+<p>Sometimes a customer writes "cancel my account," and it isn't clear whether they want the whole account and data deleted, or just their subscription canceled. In that case:</p>
+<ul>
+<li><b>Ask once, neutrally.</b> For example: "Just to be sure I do the right thing, would you like me to cancel your subscription, or delete your account and data entirely?"</li>
+<li><b>Don't push.</b> Don't add reasons to keep the account, and don't ask a second time.</li>
+<li><b>Follow their answer.</b></li>
+</ul>
+<h3>How to handle a deletion request</h3>
+<ol>
+<li><b>Confirm the request.</b> Make sure it's clear they want the account and data deleted rather than canceling their subscription.</li>
+<li><b>Forward the request promptly.</b></li>
+</ol>`},
   { n:23, id:"l23", title:"Shipping policy & restrictions", mins:3, body:`
 <div class="tbl"><table><tr><th>Option</th><th>Price</th><th>Timing</th></tr>
 <tr><td>USPS</td><td>Free</td><td>About 3–7 days (East Coast) to 7–14 days (West Coast). PO boxes OK.</td></tr>
