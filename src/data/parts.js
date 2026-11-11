@@ -570,25 +570,21 @@ export const PARTS = [
 <li>Free replacement outside warranty? Only for a Tier 2 recall</li>
 <li>For replacements, explain the return deadline and hardware charge</li>
 </ul>`},
-  { n:26, id:"l26", title:"Escalation policy & routing", mins:5, body:`
+  { n:26, id:"l26", title:"Escalation policy & routing", mins:2, body:`
 <h3>Escalate when</h3>
 <ul>
-<li>The customer asks for a human or a phone number, or says "I give up" or "I've tried everything."</li>
-<li>They've shown frustration twice or more, or used profanity.</li>
-<li><b>Two fixes have already failed.</b> Don't repeat the same step.</li>
-<li>The tracker has been stuck for more than 24 hours, or the case has been open for more than 24 hours.</li>
-<li>The problem is a hardware or connectivity issue you can't solve: CHECK# or STATUS# don't match, the SIM is inactive, there's no GNSS fix, or audio is still blocked.</li>
+<li>You've exhausted all available troubleshooting and aren't sure what to do next. Escalate to the Tier 2 team.</li>
+<li>The tracker has been stuck, or the case open, for more than 24 hours.</li>
 </ul>
+<div class="note"><b>Rule of thumb:</b> Don't repeat the same step. If you're out of options, escalate.</div>
 <h3>Who handles what</h3>
 <div class="tbl"><table><tr><th>Issue</th><th>Owner</th></tr>
-<tr><td>Device and connectivity</td><td>Tier 2: Alex, Brooks</td></tr>
-<tr><td>Suspected product bugs</td><td>Mitch Belsley + the technical team</td></tr>
-<tr><td>Discounts and courtesy refunds</td><td>Kevin Garma</td></tr>
-<tr><td>Chargebacks and disputes</td><td>Finance</td></tr>
-<tr><td>Wrong item shipped</td><td>Fulfillment</td></tr>
-<tr><td>Legal and law enforcement</td><td><code>legal@logistimatics.com</code></td></tr>
-<tr><td>Fleets of 5+ trackers</td><td>GPX sales</td></tr>
-<tr><td>Abuse, threats, safety incidents</td><td>Mitch Belsley, immediately</td></tr>
+<tr><td>Device and connectivity</td><td>Tier 2: Brooks and Jay</td></tr>
+<tr><td>Suspected product bugs</td><td>Mitch, Jay, and Brooks</td></tr>
+<tr><td>Chargebacks and disputes</td><td>Finance / Tammy</td></tr>
+<tr><td>Wrong item shipped or received</td><td>Fulfillment team</td></tr>
+<tr><td>Legal inquiries and law enforcement</td><td><code>legal@logistimatics.com</code> or Kevin West</td></tr>
+<tr><td>Fleets of 10+ trackers</td><td>GPX sales team</td></tr>
 </table></div>`}
   ],
   quiz:[
