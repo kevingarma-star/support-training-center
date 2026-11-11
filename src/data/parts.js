@@ -595,7 +595,7 @@ export const PARTS = [
 <li>the customer used the service all month</li>
 </ul>
 <div class="note"><b>Rules</b>Solve the problem first. Log the concession type, amount and scenario. Get a second opinion if the customer got a concession in the last 3 months. Never use a concession to buy a good CSAT score.</div>`},
-  { n:26, id:"l26", title:"Escalation policy & when to involve Tier 2", mins:5, body:`
+  { n:26, id:"l26", title:"Escalation policy & routing", mins:5, body:`
 <h3>Escalate when</h3>
 <ul>
 <li>The customer asks for a human or a phone number, or says "I give up" or "I've tried everything."</li>
