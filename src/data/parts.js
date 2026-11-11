@@ -521,16 +521,23 @@ export const PARTS = [
   <text x="280" y="452" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Close the ticket</text>
 </svg>`},
   { n:23, id:"l23", title:"Shipping policy & restrictions", mins:3, body:`
-<div class="tbl"><table><tr><th>Option</th><th>Price</th><th>Timing</th></tr>
-<tr><td>USPS</td><td>Free</td><td>About 3–7 days (East Coast) to 7–14 days (West Coast). PO boxes OK.</td></tr>
-<tr><td>UPS 2nd Day Air</td><td>$30</td><td>Business days only. No PO boxes.</td></tr>
-<tr><td>UPS Next Day Air</td><td>$50</td><td>1 business day after processing. No PO boxes.</td></tr>
+<div class="tbl"><table><tr><th>Option</th><th>Price</th><th>Timing</th><th>PO boxes</th></tr>
+<tr><td>USPS</td><td>Free</td><td>3–7 days (East Coast), 7–14 days (West Coast)</td><td>Yes</td></tr>
+<tr><td>UPS 2nd Day Air</td><td>$30</td><td>Business days only</td><td>No</td></tr>
+<tr><td>UPS Next Day Air</td><td>$50</td><td>1 business day after processing</td><td>No</td></tr>
 </table></div>
+<div class="note"><b>Remember:</b> UPS timing starts after processing, so Next Day Air doesn't mean "arrives tomorrow" for an order placed today.</div>
+<h3>When orders ship</h3>
 <ul>
-<li>Orders ship from Greensboro, NC, in plain packaging. They're processed on weekdays, and the cutoff is 3 PM ET.</li>
+<li>Orders ship from Greensboro, NC, in plain packaging.</li>
+<li>Processed on weekdays only, with a 3 PM ET cutoff.</li>
 <li><b>Friday orders, including expedited ones, ship the next business day.</b></li>
 <li><b>No international shipping.</b></li>
-<li>An order can only be changed or canceled <b>before it ships</b>. After that, offer a return label.</li>
+</ul>
+<h3>Changing or canceling an order</h3>
+<ul>
+<li>An order can only be changed or canceled <b>before it ships</b>.</li>
+<li>After it ships, offer a return label instead.</li>
 </ul>`},
   { n:24, id:"l24", title:"Warranty policy", mins:3, body:`
 <ul>
