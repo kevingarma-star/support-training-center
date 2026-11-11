@@ -360,14 +360,91 @@ export const PARTS = [
 
 <h3>Refund timing</h3>
 <p>Refunds take 5–10 business days after we process them. Always give the customer a specific date to expect it by, not just "5–10 days." Counting forward from the day you process it shows them you're on top of it.</p>`},
-  { n:21, id:"l21", title:"Subscription cancellation process", mins:4, body:`
+  { n:21, id:"l21", title:"Subscription cancellation process", mins:6, body:`
+<div class="note"><b>What you'll learn</b>How cancellation works and what the customer sees · When to make a save attempt, and when not to · What to tell customers about billing, timing, and returns · How to close the loop in every system</div>
+<h3>1. How cancellation works</h3>
+<p><b>Self-serve:</b> The customer goes to <code>app.logistimatics.com/manage/subscriptions</code>, selects the subscription, and clicks Cancel. Agents can also cancel on the backend.</p>
+<p><b>What happens next:</b></p>
 <ul>
-<li><b>Self-serve:</b> <code>app.logistimatics.com/manage/subscriptions</code> → select the subscription → Cancel. Agents can also cancel on the backend.</li>
-<li>The status changes to "pending cancellation." The customer isn't charged again, and service continues to the end of the paid period.</li>
-<li>Deleting the app, stopping use, or returning the device <b>does not</b> cancel the subscription.</li>
-<li>Reactivating later starts a new billing cycle at current rates.</li>
-<li><b>Save attempts:</b> make one warm attempt on routine cancellations. Never make one on data deletion requests, with customers who've clearly decided, or when misleading information was involved.</li>
-</ul>`},
+<li>The status changes to "pending cancellation."</li>
+<li>The customer isn't charged again.</li>
+<li>Service continues to the end of the paid period.</li>
+</ul>
+<p>If the customer asks for immediate cancellation, you can do that instead. Tell them service stops right away.</p>
+<p>Reactivating later starts a new billing cycle at current rates.</p>
+<h3>2. What does NOT cancel a subscription</h3>
+<p>This is the most common source of surprise charges. Remind customers that none of the following cancels a subscription:</p>
+<ul>
+<li>Deleting the app</li>
+<li>Stopping use of the tracker</li>
+<li>Returning the device</li>
+<li>Letting the battery die</li>
+</ul>
+<p><b>Important:</b> Whenever you process a return, always make sure to mark the subscription for cancellation.</p>
+<h3>3. Cancellation vs. account deletion</h3>
+<p>These are different requests. Cancellation stops future billing and keeps the account. Deletion is permanent and deactivates the devices.</p>
+<ul>
+<li>If a request is unclear, ask once, neutrally: "Would you like to cancel the subscription, or delete the account entirely?"</li>
+<li>Never make a save attempt on a deletion request.</li>
+</ul>
+<h3>4. Save attempts</h3>
+<p><b>No reason provided:</b> Always make a retention attempt. Use the <b>Retention</b> macro (type the keyword <code>Retention</code> to pull it up).</p>
+<p><b>Reason provided that's outside our control</b> (for example, "no longer needed," moving, sold the vehicle): proceed with the cancellation as requested. No save attempt.</p>
+<p><b>Never make a save attempt when:</b></p>
+<ul>
+<li>Misleading information was involved</li>
+<li>They're upset or have already asked twice</li>
+</ul>
+<p>One attempt only. Don't repeat it, don't add friction, and don't make cancelling feel harder than it is.</p>
+<h3>5. If the customer was already charged</h3>
+<ul>
+<li>Subscriptions are typically non-refundable, but you can issue courtesy refunds at your discretion.</li>
+<li>Prorated refunds are evaluated case by case.</li>
+<li>If the charge was a mistake on our side (for example, a duplicate), refund it.</li>
+</ul>
+<h3>Here's our cancellation workflow</h3>
+<ol>
+<li><b>Ask for the reason</b> — find out why they're canceling before doing anything</li>
+<li><b>Retention effort</b> — if no reason given, use the Retention macro; if reason is outside our control, skip it</li>
+<li><b>Cancel the subscription</b> — mark it as "pending cancellation" or cancel immediately if they ask</li>
+<li><b>Handle any return or refund</b> — if applicable, process before closing</li>
+<li><b>Update the ticket</b> — add notes and close out</li>
+</ol>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" style="width:100%;max-width:480px;display:block;margin:1.5rem auto">
+  <defs>
+    <marker id="arr-cf" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="140" y="10" width="200" height="40" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="240" y="34" text-anchor="middle" font-size="13" fill="#1e40af" font-weight="600">Ask for the reason</text>
+  <line x1="240" y1="50" x2="240" y2="74" stroke="#555" stroke-width="1.5" marker-end="url(#arr-cf)"/>
+  <polygon points="240,76 330,106 240,136 150,106" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="240" y="110" text-anchor="middle" font-size="12" fill="#78350f">Reason provided?</text>
+  <text x="118" y="100" text-anchor="middle" font-size="11" fill="#555" font-style="italic">No</text>
+  <line x1="150" y1="106" x2="96" y2="106" stroke="#555" stroke-width="1.5" marker-end="url(#arr-cf)"/>
+  <rect x="10" y="84" width="84" height="44" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="52" y="103" text-anchor="middle" font-size="12" fill="#1e40af">Retention</text>
+  <text x="52" y="119" text-anchor="middle" font-size="12" fill="#1e40af">macro</text>
+  <line x1="52" y1="128" x2="52" y2="210" stroke="#555" stroke-width="1.5"/>
+  <line x1="52" y1="210" x2="138" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arr-cf)"/>
+  <text x="362" y="100" text-anchor="middle" font-size="11" fill="#555" font-style="italic">Yes</text>
+  <line x1="330" y1="106" x2="386" y2="106" stroke="#555" stroke-width="1.5"/>
+  <line x1="386" y1="106" x2="386" y2="210" stroke="#555" stroke-width="1.5"/>
+  <line x1="386" y1="210" x2="342" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arr-cf)"/>
+  <text x="392" y="148" font-size="10" fill="#999">outside our</text>
+  <text x="392" y="161" font-size="10" fill="#999">control —</text>
+  <text x="392" y="174" font-size="10" fill="#999">skip retention</text>
+  <rect x="140" y="190" width="200" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="240" y="214" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Cancel the subscription</text>
+  <line x1="240" y1="230" x2="240" y2="253" stroke="#555" stroke-width="1.5" marker-end="url(#arr-cf)"/>
+  <rect x="140" y="256" width="200" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="240" y="276" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Handle return/refund</text>
+  <text x="240" y="294" text-anchor="middle" font-size="11" fill="#166534" font-style="italic">(if applicable)</text>
+  <line x1="240" y1="306" x2="240" y2="329" stroke="#555" stroke-width="1.5" marker-end="url(#arr-cf)"/>
+  <rect x="140" y="332" width="200" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="240" y="356" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Update the ticket</text>
+</svg>`},
   { n:22, id:"l22", title:"Account deletion policy", mins:3, body:`
 <div class="note"><b>What you'll learn</b>By the end of this lesson, you'll be able to recognize a deletion request, handle it promptly and neutrally, and confirm it's complete before closing the conversation.</div>
 <h3>The basics</h3>
@@ -395,7 +472,54 @@ export const PARTS = [
 <ol>
 <li><b>Confirm the request.</b> Make sure it's clear they want the account and data deleted rather than canceling their subscription.</li>
 <li><b>Forward the request promptly.</b></li>
-</ol>`},
+</ol>
+<h3>Here's our account deletion workflow</h3>
+<ol>
+<li><b>Ticket request comes in</b></li>
+<li><b>Send confirmation email</b> — use the Acct Deletion vs. Cancellation macro to clarify what the customer wants</li>
+<li><b>Customer responds:</b>
+  <ul>
+    <li><i>Subscription cancellation</i> → follow the cancellation workflow</li>
+    <li><i>Account deletion</i> → forward the initial request to <code>legal@logistimatics.com</code>, close the forwarded ticket, send the 'Request Forwarded' macro to the customer, then close the ticket</li>
+  </ul>
+</li>
+</ol>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 490" style="width:100%;max-width:480px;display:block;margin:1.5rem auto">
+  <defs>
+    <marker id="arr-ad" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="180" y="10" width="200" height="40" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="280" y="34" text-anchor="middle" font-size="13" fill="#1e40af" font-weight="600">Ticket request comes in</text>
+  <line x1="280" y1="50" x2="280" y2="72" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="130" y="74" width="300" height="52" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="280" y="96" text-anchor="middle" font-size="13" fill="#1e40af" font-weight="600">Send confirmation email</text>
+  <text x="280" y="114" text-anchor="middle" font-size="11" fill="#1e40af">(Acct Deletion vs. Cancellation macro)</text>
+  <line x1="280" y1="126" x2="280" y2="148" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <polygon points="280,150 400,172 280,194 160,172" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="280" y="176" text-anchor="middle" font-size="12" fill="#78350f">Customer's response?</text>
+  <text x="142" y="164" text-anchor="middle" font-size="10" fill="#555" font-style="italic">Cancellation</text>
+  <line x1="160" y1="172" x2="127" y2="172" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="5" y="152" width="120" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="65" y="169" text-anchor="middle" font-size="11" fill="#14532d">Follow cancellation</text>
+  <text x="65" y="183" text-anchor="middle" font-size="11" fill="#14532d">workflow</text>
+  <text x="288" y="204" font-size="10" fill="#555" font-style="italic">Account deletion</text>
+  <line x1="280" y1="194" x2="280" y2="216" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="130" y="218" width="300" height="52" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="240" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Forward request to</text>
+  <text x="280" y="257" text-anchor="middle" font-size="12" fill="#14532d">legal@logistimatics.com</text>
+  <line x1="280" y1="270" x2="280" y2="290" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="160" y="292" width="240" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="316" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Close forwarded ticket</text>
+  <line x1="280" y1="332" x2="280" y2="352" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="130" y="354" width="300" height="52" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="376" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Send 'Request Forwarded'</text>
+  <text x="280" y="393" text-anchor="middle" font-size="12" fill="#14532d">macro to customer</text>
+  <line x1="280" y1="406" x2="280" y2="426" stroke="#555" stroke-width="1.5" marker-end="url(#arr-ad)"/>
+  <rect x="160" y="428" width="240" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="452" text-anchor="middle" font-size="13" fill="#14532d" font-weight="600">Close the ticket</text>
+</svg>`},
   { n:23, id:"l23", title:"Shipping policy & restrictions", mins:3, body:`
 <div class="tbl"><table><tr><th>Option</th><th>Price</th><th>Timing</th></tr>
 <tr><td>USPS</td><td>Free</td><td>About 3–7 days (East Coast) to 7–14 days (West Coast). PO boxes OK.</td></tr>
