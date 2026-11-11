@@ -570,31 +570,6 @@ export const PARTS = [
 <li>Free replacement outside warranty? Only for a Tier 2 recall</li>
 <li>For replacements, explain the return deadline and hardware charge</li>
 </ul>`},
-  { n:25, id:"l25", title:"Discount codes & when to use them", mins:5, body:`
-<div class="tbl"><table><tr><th>Code</th><th>Discount</th><th>Typical use</th></tr>
-<tr><td><code>TRACKMORE2026</code></td><td>20% off the first payment</td><td>Save attempts, 2G upgrades, replacing a lost or broken tracker</td></tr>
-<tr><td><code>SAVE10</code></td><td>10% off</td><td>Gentle incentives</td></tr>
-<tr><td><code>LGMX50</code></td><td>50% off</td><td>Rare, high-value cases. Use it sparingly.</td></tr>
-</table></div>
-<p class="small muted">Old codes you'll still see in macros (TRACKMORE, TRACKMORE24, TRACKMORE2025, CS50) are retired. Don't send them.</p>
-<h3>Concessions</h3>
-<p>Kevin makes the final call on discounts and courtesy refunds. <b>Good reasons for a concession:</b></p>
-<ul>
-<li>a significant technical problem</li>
-<li>a delay on our side</li>
-<li>a customer who missed cancelling before renewal by about a day</li>
-<li>months billed on a dead or 2G device</li>
-<li>exceptional circumstances</li>
-</ul>
-<p><b>Say no when:</b></p>
-<ul>
-<li>a quick fix already solved the problem</li>
-<li>the customer entered a bad address</li>
-<li>we responded on time</li>
-<li>the customer already got a compensated resolution</li>
-<li>the customer used the service all month</li>
-</ul>
-<div class="note"><b>Rules</b>Solve the problem first. Log the concession type, amount and scenario. Get a second opinion if the customer got a concession in the last 3 months. Never use a concession to buy a good CSAT score.</div>`},
   { n:26, id:"l26", title:"Escalation policy & routing", mins:5, body:`
 <h3>Escalate when</h3>
 <ul>
