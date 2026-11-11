@@ -539,13 +539,36 @@ export const PARTS = [
 <li>An order can only be changed or canceled <b>before it ships</b>.</li>
 <li>After it ships, offer a return label instead.</li>
 </ul>`},
-  { n:24, id:"l24", title:"Warranty policy", mins:3, body:`
+  { n:24, id:"l24", title:"Warranty policy", mins:2, body:`
+<h3>The basics</h3>
 <ul>
 <li>The warranty lasts <b>30 days from purchase</b>.</li>
-<li>Accidental damage, loss and theft aren't covered.</li>
-<li>Replacing a device outside the warranty counts as a <b>concession</b>. Ask why the customer wants it first, and log it.</li>
-<li>If Tier 2 recommends a <b>recall or replacement</b>, the new unit arrives pre-activated with the same renewal date plus 1 week. The customer sends the old unit back with the prepaid label by the deadline, or is charged for the hardware.</li>
-<li>If a problem can't be fixed within 5 days, offer a final resolution. That can include returning a device with a chronic fault, even after 30 days (see lesson 46).</li>
+<li>Accidental damage, loss, and theft aren't covered.</li>
+</ul>
+<h3>Outside the warranty</h3>
+<p>Replacing a device after 30 days is a <b>concession</b>. Use your discretion:</p>
+<ul>
+<li>Review the account history — past tickets, devices, and subscription status — to decide whether a replacement makes sense.</li>
+<li>Leave a note on the ticket.</li>
+</ul>
+<p><b>Alternative:</b> Instead of a free replacement, offer a discount on a new device.</p>
+<div class="note"><b>The only exception:</b> Courtesy replacements outside the warranty are given only when Tier 2 calls a recall.</div>
+<h3>Recalls and replacements</h3>
+<p>If Tier 2 recommends a recall or replacement:</p>
+<ul>
+<li>The new unit arrives pre-activated, with the same renewal date plus 1 week.</li>
+<li>The customer sends the old unit back with the prepaid label, by the deadline.</li>
+<li>If they don't, they're charged for the hardware.</li>
+</ul>
+<h3>Problems that can't be fixed</h3>
+<p>If an issue can't be fixed within 5 days, offer a final resolution. That can include a return for a chronic fault, even after 30 days.</p>
+<h3>Quick checklist</h3>
+<ul>
+<li>Check the purchase date</li>
+<li>Rule out damage, loss, or theft</li>
+<li>Review the account history before deciding, then leave a note</li>
+<li>Free replacement outside warranty? Only for a Tier 2 recall</li>
+<li>For replacements, explain the return deadline and hardware charge</li>
 </ul>`},
   { n:25, id:"l25", title:"Discount codes & when to use them", mins:5, body:`
 <div class="tbl"><table><tr><th>Code</th><th>Discount</th><th>Typical use</th></tr>
