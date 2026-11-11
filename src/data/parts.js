@@ -809,6 +809,19 @@ export const PARTS = [
 <li><b>Mirror the customer.</b> Match their words and how technical they are.</li>
 <li><b>Be confident and direct.</b> Say what you did and what happens next, including timing.</li>
 <li><b>Going the extra mile doesn't always mean a concession.</b> Anticipate their next question, and teach them to manage their own account.</li>
+</ul>
+<h3>Quick tips</h3>
+<ul>
+<li><b>Lead with warmth.</b> A friendly greeting and a thank-you set the tone for the whole conversation.</li>
+<li><b>Acknowledge how the customer feels.</b> A sincere sentence of empathy goes a long way before moving to the solution.</li>
+<li><b>Keep it conversational.</b> Write the way you'd talk to someone, in a natural, friendly voice.</li>
+<li><b>Be clear and concise.</b> Give people what they need without extra words.</li>
+<li><b>Explain the "why."</b> A short explanation helps customers understand and reduces repeat questions.</li>
+<li><b>Offer a next step.</b> Let the customer know what happens next, so they never feel left hanging.</li>
+<li><b>Be honest.</b> If something isn't possible or isn't known yet, say so kindly.</li>
+<li><b>Own mistakes.</b> A genuine apology and a quick fix build trust.</li>
+<li><b>Protect the customer.</b> Handle personal and payment information with care.</li>
+<li><b>Close on a warm note.</b> End so the customer feels helped and valued.</li>
 </ul>`},
   { n:35, id:"l35", title:"Email writing style & structure", mins:6, body:`
 <div class="email"><span class="lbl">Opener</span>Hi [Customer Name] 😊 It's [Your Name] from the Logistimatics Support Team here to assist you</div>
