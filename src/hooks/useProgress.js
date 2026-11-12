@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 
 const STORAGE_KEY = 'stc_progress_v1';
 
-const LEVEL_THRESHOLDS = [
+export const LEVEL_THRESHOLDS = [
   { xp: 0,    label: 'Signal Seeker' },
   { xp: 300,  label: 'Pathfinder' },
   { xp: 700,  label: 'Navigator' },
@@ -13,7 +13,7 @@ const LEVEL_THRESHOLDS = [
 
 const XP_LESSON    = 20;
 const XP_QUIZ_PASS = 100;
-const XP_QUIZ_ACE  = 50;   // bonus for 100%
+const XP_QUIZ_ACE  = 50;
 const XP_SCENARIO  = 40;
 
 function getLevel(xp) {
@@ -35,45 +35,48 @@ function load() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     return raw ? JSON.parse(raw) : null;
-  } catch {
-    return null;
-  }
+  } catch { return null; }
 }
 
-function save(state) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  } catch {
-    // ignore storage errors
-  }
+function save(s) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch { /* ignore */ }
 }
 
 function defaultState() {
   return {
     xp: 0,
-    completedLessons: {},   // lessonId -> true
-    quizScores: {},          // partId -> { score, total, passed }
-    completedScenarios: {},  // scenarioIndex -> true
-    badges: {},              // badgeId -> true
+    completedLessons: {},
+    quizScores: {},
+    completedScenarios: {},
+    lastGain: null,   // { amount, quizPassed? }
+    leveledUp: false,
+  };
+}
+
+function applyXp(prev, xpGain, patch, quizPassed) {
+  const oldLevel = getLevel(prev.xp);
+  const newXp = prev.xp + xpGain;
+  const newLevel = getLevel(newXp);
+  return {
+    ...prev,
+    ...patch,
+    xp: newXp,
+    lastGain: xpGain > 0 ? { amount: xpGain, quizPassed: !!quizPassed } : prev.lastGain,
+    leveledUp: newLevel > oldLevel,
   };
 }
 
 export function useProgress() {
   const [state, setState] = useState(() => load() || defaultState());
 
-  useEffect(() => {
-    save(state);
-  }, [state]);
+  useEffect(() => { save(state); }, [state]);
 
   const completeLesson = useCallback((lessonId) => {
     setState(prev => {
       if (prev.completedLessons[lessonId]) return prev;
-      const next = {
-        ...prev,
-        xp: prev.xp + XP_LESSON,
+      return applyXp(prev, XP_LESSON, {
         completedLessons: { ...prev.completedLessons, [lessonId]: true },
-      };
-      return next;
+      });
     });
   }, []);
 
@@ -81,37 +84,36 @@ export function useProgress() {
     setState(prev => {
       const passed = score / total >= 0.8;
       const ace = score === total;
-      const existing = prev.quizScores[partId];
-      // only award XP if this is first passing attempt or better score
-      const prevPassed = existing?.passed;
+      const prevPassed = prev.quizScores[partId]?.passed;
       const xpGain = !prevPassed && passed ? XP_QUIZ_PASS + (ace ? XP_QUIZ_ACE : 0) : 0;
-      return {
-        ...prev,
-        xp: prev.xp + xpGain,
-        quizScores: {
-          ...prev.quizScores,
-          [partId]: { score, total, passed },
-        },
-      };
+      return applyXp(
+        prev, xpGain,
+        { quizScores: { ...prev.quizScores, [partId]: { score, total, passed } } },
+        passed,
+      );
     });
   }, []);
 
   const completeScenario = useCallback((idx) => {
     setState(prev => {
       if (prev.completedScenarios[idx]) return prev;
-      return {
-        ...prev,
-        xp: prev.xp + XP_SCENARIO,
+      return applyXp(prev, XP_SCENARIO, {
         completedScenarios: { ...prev.completedScenarios, [idx]: true },
-      };
+      });
     });
   }, []);
 
-  const resetProgress = useCallback(() => {
-    setState(defaultState());
+  const clearLastGain = useCallback(() => {
+    setState(prev => ({ ...prev, lastGain: null }));
   }, []);
 
-  const { xp, completedLessons, quizScores, completedScenarios } = state;
+  const clearLevelUp = useCallback(() => {
+    setState(prev => ({ ...prev, leveledUp: false }));
+  }, []);
+
+  const resetProgress = useCallback(() => setState(defaultState()), []);
+
+  const { xp, completedLessons, quizScores, completedScenarios, lastGain, leveledUp } = state;
   const levelIndex = getLevel(xp);
   const levelLabel = LEVEL_THRESHOLDS[levelIndex].label;
   const nextXp = getNextThreshold(xp);
@@ -121,18 +123,9 @@ export function useProgress() {
     : Math.round(((xp - prevXp) / (nextXp - prevXp)) * 100);
 
   return {
-    xp,
-    levelIndex,
-    levelLabel,
-    xpPct,
-    nextXp,
-    completedLessons,
-    quizScores,
-    completedScenarios,
-    completeLesson,
-    submitQuiz,
-    completeScenario,
-    resetProgress,
-    LEVEL_THRESHOLDS,
+    xp, levelIndex, levelLabel, xpPct, nextXp,
+    completedLessons, quizScores, completedScenarios,
+    completeLesson, submitQuiz, completeScenario, resetProgress,
+    LEVEL_THRESHOLDS, lastGain, clearLastGain, leveledUp, clearLevelUp,
   };
 }
